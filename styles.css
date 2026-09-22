@@ -50,7 +50,7 @@ body {
 .glass-card {
   width: min(820px, 100%);
 
-  padding: 48px 56px 58px;
+  padding: 44px 56px 54px;
 
   text-align: center;
 
@@ -74,16 +74,16 @@ body {
 }
 
 .hero-logo {
-  width: min(185px, 42vw);
+  width: 110px;
   height: auto;
 
   display: block;
 
-  margin: 0 auto 18px;
+  margin: 0 auto 14px;
 
   filter:
-    drop-shadow(0 20px 36px rgba(0, 0, 0, 0.36))
-    drop-shadow(0 0 24px rgba(71, 124, 255, 0.16));
+    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 18px rgba(71, 124, 255, 0.14));
 }
 
 .eyebrow {
@@ -216,15 +216,15 @@ footer a:hover {
   }
 
   .glass-card {
-    padding: 38px 20px 44px;
+    padding: 34px 20px 42px;
 
     border-radius: 26px;
   }
 
   .hero-logo {
-    width: min(150px, 50vw);
+    width: 95px;
 
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .eyebrow {
