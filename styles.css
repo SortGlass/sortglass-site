@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(71, 112, 255, 0.24),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 30% 70%,
+      rgba(168, 85, 247, 0.16),
+      transparent 36%
+    ),
+    #08090c;
+}
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 48px 24px;
+}
+
+.glass-card {
+  width: min(900px, 100%);
+
+  padding: 80px 60px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 36px;
+
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.eyebrow {
+  margin-bottom: 28px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+h1 {
+  margin: 0;
+
+  font-size: clamp(58px, 9vw, 110px);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+
+  font-weight: 700;
+}
+
+.subtitle {
+  max-width: 620px;
+
+  margin: 34px auto 0;
+
+  font-size: clamp(18px, 2.3vw, 24px);
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.actions {
+  margin-top: 44px;
+
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  color: #08090c;
+
+  background: white;
+}
+
+.secondary {
+  color: white;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.coming-soon {
+  margin-top: 32px;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.38);
+}
+
+footer {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  padding: 20px;
+
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.38);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.55);
+
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 24px 16px;
+  }
+
+  .glass-card {
+    padding: 60px 24px;
+
+    border-radius: 28px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+
+    gap: 16px;
+  }
+}
