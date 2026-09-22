@@ -2,167 +2,635 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Privacy Policy — SortGlass</title>
   <meta
     name="description"
-    content="Privacy Policy for the SortGlass app."
+    content="Privacy information for SortGlass, its website, iCloud statistics backup, purchases, support, and TestFlight testing."
   >
 
-  <link rel="stylesheet" href="styles.css">
-
   <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          ellipse at top left,
+          rgba(50, 100, 180, 0.12),
+          transparent 55%
+        ),
+        #101116;
+      color: #eeeef3;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.75;
+    }
+
     .policy {
-      width: min(820px, calc(100% - 32px));
-      margin: 60px auto;
-      padding: 48px;
-
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 28px;
-
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-
-      box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      width: min(860px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: 44px;
+      background: rgba(25, 27, 34, 0.95);
+      border: 1px solid #363944;
+      border-radius: 24px;
     }
 
-    .policy h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      margin-bottom: 12px;
+    h1 {
+      margin-bottom: 16px;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
     }
 
-    .updated {
-      color: rgba(255, 255, 255, 0.45);
-      margin-bottom: 40px;
-    }
-
-    .policy h2 {
+    h2 {
       margin-top: 36px;
-      font-size: 24px;
+      font-size: 23px;
+      line-height: 1.35;
     }
 
-    .policy p,
-    .policy li {
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.7;
+    p,
+    li {
+      color: #d0d2dc;
     }
 
-    .policy a {
-      color: white;
+    li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #9dceff;
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #9dceff;
+      outline-offset: 4px;
     }
 
     .back {
       display: inline-block;
-      margin-bottom: 32px;
-      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 16px;
       text-decoration: none;
+    }
+
+    .updated {
+      color: #b5b8c5;
+      margin-bottom: 32px;
     }
 
     @media (max-width: 600px) {
       .policy {
-        margin: 24px auto;
-        padding: 28px 22px;
+        margin: 20px auto;
+        padding: 26px 22px;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+      }
+
+      body,
+      .policy {
+        background: white;
+        color: black;
+      }
+
+      .policy {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      p,
+      li,
+      a,
+      .updated {
+        color: black;
       }
     }
   </style>
 </head>
 
 <body>
-
   <main class="policy">
-
     <a class="back" href="index.html">← SortGlass</a>
 
     <h1>Privacy Policy</h1>
 
     <p class="updated">
-      Last updated: September 21, 2026
+      Last updated:
+      <time datetime="2026-09-21">September 21, 2026</time>
     </p>
 
     <p>
-      SortGlass is designed to help you organize your photo library while
-      minimizing the collection of personal information.
-    </p>
-
-    <h2>Photo Library Access</h2>
-
-    <p>
-      SortGlass may request access to your photo library so that you can view,
-      organize, rate, favorite, add photos or videos to albums, and select items
-      for deletion.
+      SortGlass is operated by Cyrus Press, an individual developer based
+      in California, United States. This Privacy Policy describes how
+      information is handled when you use the SortGlass app, including
+      public App Store releases and TestFlight builds, visit sortglass.com,
+      or contact support.
     </p>
 
     <p>
-      Your photos and videos are processed on your device. SortGlass does not
-      upload your photo library to SortGlass-operated servers.
-    </p>
-
-    <h2>Information We Collect</h2>
-
-    <p>
-      SortGlass does not sell your personal information.
+      For information for which the operator determines the purposes and
+      means of processing, Cyrus Press is the data controller.
     </p>
 
     <p>
-      The app may store information necessary to provide its features, such as
-      app preferences, organization data, ratings, and usage statistics.
-    </p>
-
-    <h2>iCloud</h2>
-
-    <p>
-      If you enable features that use iCloud, certain SortGlass app data may be
-      stored in your personal iCloud account and synchronized across your
-      devices using Apple's services.
-    </p>
-
-    <h2>Purchases</h2>
-
-    <p>
-      Purchases and subscriptions are processed by Apple through the App Store.
-      SortGlass does not receive your full payment-card information.
-    </p>
-
-    <h2>Third-Party Services</h2>
-
-    <p>
-      SortGlass may rely on Apple services that are necessary for app
-      functionality, such as the App Store, Photos framework, and iCloud.
-    </p>
-
-    <h2>Data Sharing</h2>
-
-    <p>
-      SortGlass does not sell your personal information or your photo-library
-      content to advertisers or data brokers.
-    </p>
-
-    <h2>Children's Privacy</h2>
-
-    <p>
-      SortGlass is not intended to knowingly collect personal information from
-      children in violation of applicable law.
-    </p>
-
-    <h2>Changes to This Policy</h2>
-
-    <p>
-      This Privacy Policy may be updated as SortGlass changes. The latest
-      version will be posted on this page with an updated effective date.
-    </p>
-
-    <h2>Contact</h2>
-
-    <p>
-      Questions about this Privacy Policy can be sent to
+      Privacy questions and requests:
       <a href="mailto:support@sortglass.com">support@sortglass.com</a>.
     </p>
 
-  </main>
+    <h2>1. Overview</h2>
 
+    <p>
+      SortGlass helps you review and organize your Apple Photos library.
+      The app processes the photos and videos you authorize on your device.
+      SortGlass does not operate a server that receives your photo or video
+      library.
+    </p>
+
+    <p>
+      We do not sell your personal information or use your photo library
+      for advertising or AI training. The app does not include advertising
+      SDKs, an advertising-identifier integration, or a separate
+      developer-operated behavioral analytics service.
+    </p>
+
+    <p>
+      This does not mean that no information leaves your device.
+      Optional iCloud statistics backup, Apple services, TestFlight,
+      website hosting, support communications, and sharing you initiate
+      can involve the information described below.
+    </p>
+
+    <h2>2. Photo Library Access</h2>
+
+    <p>
+      With your permission, SortGlass accesses authorized photos and
+      videos so you can view, review, organize, rate, favorite, add items
+      to albums, and request deletion.
+    </p>
+
+    <p>
+      Associated information can include photo-library identifiers,
+      capture dates, media types, dimensions, duration, album membership,
+      favorites, ratings, available file sizes, and embedded metadata
+      such as recorded photo locations.
+    </p>
+
+    <p>
+      Actions you take through SortGlass can change your Apple Photos
+      library. If you use iCloud Photos, Apple may synchronize those
+      changes across your devices according to your settings.
+    </p>
+
+    <p>
+      Apple Photos may download cloud-stored originals when needed.
+      This is different from SortGlass uploading your library to a
+      developer-operated server.
+    </p>
+
+    <p>
+      You control SortGlass’s Photos access in iOS Settings. Restricting
+      or withdrawing access can limit features that depend on your
+      photo library.
+    </p>
+
+    <h2>3. Preferences and Organizing Information</h2>
+
+    <p>
+      SortGlass stores information needed for its features locally on
+      your device. This can include appearance preferences, organizing
+      progress, reviewed-item identifiers, cleanup history, statistics,
+      goals, achievements, and a processed-item allowance used for
+      free access limits.
+    </p>
+
+    <p>
+      This information supports your organizing experience. It is not
+      a developer dashboard of your individual photo activity.
+    </p>
+
+    <p>
+      Clearing dashboard statistics does not reset the free allowance,
+      delete your photos, or undo changes already made to Apple Photos.
+    </p>
+
+    <h2>4. Optional iCloud Statistics Backup</h2>
+
+    <p>
+      Where available in your version of SortGlass, you can enable
+      optional backup of statistics and organizing information using
+      Apple’s CloudKit service. Availability can differ between beta
+      builds and public releases. Builds that do not offer this
+      feature do not perform this backup.
+    </p>
+
+    <p>
+      Backup data may include cleanup statistics, achievements,
+      organizing activity and history, timestamps, and identifiers
+      associated with photo-library items. These identifiers help
+      associate records with library items and maintain consistent
+      statistics; they are not the photo or video files themselves.
+    </p>
+
+    <p>
+      Backup data is stored in a private CloudKit database associated
+      with your iCloud account. SortGlass does not upload photo or
+      video files through this backup feature or use the backup as
+      a developer analytics database.
+    </p>
+
+    <p>
+      Apple processes this information to provide iCloud services under
+      its applicable terms and privacy practices. Backup availability
+      and completion depend on factors such as your iCloud account,
+      available storage, network connection, and service availability.
+    </p>
+
+    <p>
+      Turning backup off stops future backup activity on that device,
+      although an already submitted network operation may finish.
+      Turning it off does not automatically erase an existing cloud
+      backup.
+    </p>
+
+    <p>
+      Use the app’s separate cloud-backup deletion control to request
+      removal of the backup. Deletion requires a successful connection
+      to iCloud; check the result shown in the app and retry if the
+      request fails.
+    </p>
+
+    <p>
+      Deleting a cloud backup does not delete your photos or local
+      statistics. If backup remains enabled on another device, that
+      device may upload information again. To prevent further uploads,
+      turn backup off on every device where it is enabled.
+    </p>
+
+    <p>
+      This feature is separate from Apple’s iCloud Photos and device
+      backups. Depending on your Apple settings, Apple may synchronize
+      your Photos library or include app data in device backups.
+      Manage those services through Apple’s settings.
+    </p>
+
+    <p>
+      Deleting SortGlass does not necessarily delete information
+      already stored in cloud or device backups. This policy does not
+      promise storage in a particular country or universal end-to-end
+      encryption.
+    </p>
+
+    <h2>5. Photo Locations and Apple Services</h2>
+
+    <p>
+      When you use photo-location details, Apple’s mapping and geocoding
+      services may process coordinates embedded in a photo to display
+      a map or place name. These are the photo’s recorded coordinates,
+      not a request to track your current device location.
+    </p>
+
+    <p>
+      Apple also provides platform services used by SortGlass. For
+      information about Apple’s practices, see the
+      <a href="https://www.apple.com/legal/privacy/">
+        Apple Privacy Policy
+      </a>.
+    </p>
+
+    <h2>6. Purchases and Subscriptions</h2>
+
+    <p>
+      Apple processes App Store purchases and subscriptions. SortGlass
+      uses Apple’s purchase information, such as product identifiers,
+      transaction information, and entitlement status, to verify
+      access and restore purchases.
+    </p>
+
+    <p>
+      SortGlass does not receive your full payment-card information.
+      Apple may provide sales and financial reports used to operate
+      the app business.
+    </p>
+
+    <p>
+      Manage subscriptions through your Apple account. Deleting the
+      app, deleting a backup, or clearing statistics does not cancel
+      a subscription.
+    </p>
+
+    <h2>7. TestFlight and Diagnostics</h2>
+
+    <p>
+      When you participate in a TestFlight beta, Apple automatically
+      collects and shares crash logs and beta usage information with
+      the developer. This can include installation and session
+      information, device and operating-system details, and app versions.
+    </p>
+
+    <p>
+      Your name and email may be available when you are invited by
+      email. Apple does not display them to the developer merely
+      because you join through a public link.
+    </p>
+
+    <p>
+      Feedback you submit can include comments, screenshots, and
+      technical information. Avoid including private photos or other
+      sensitive content unnecessarily.
+    </p>
+
+    <p>
+      We use beta information to investigate problems and improve
+      SortGlass, and do not share TestFlight information with third
+      parties. TestFlight’s automatic collection cannot be opted out
+      of while participating. See
+      <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">
+        TestFlight &amp; Privacy
+      </a>.
+    </p>
+
+    <p>
+      For public releases, Apple may provide crash, diagnostic, sales,
+      and usage reports under its services and applicable settings.
+      Receiving these reports does not give us access to your private
+      Photos library.
+    </p>
+
+    <h2>8. Sharing and Notifications</h2>
+
+    <p>
+      You choose whether to share or copy media, share progress, or
+      send feedback. The destination you select may receive the
+      shared content and associated metadata under its own privacy
+      practices.
+    </p>
+
+    <p>
+      Copying content places it on the system clipboard. Check
+      content, metadata, and recipients before sharing.
+    </p>
+
+    <p>
+      Optional goal reminders use local notifications with your
+      permission. You can change notification permissions in
+      iOS Settings.
+    </p>
+
+    <h2>9. Support Email</h2>
+
+    <p>
+      If you contact
+      <a href="mailto:support@sortglass.com">support@sortglass.com</a>,
+      we receive your email address, message, attachments, and
+      associated email information.
+    </p>
+
+    <p>
+      We use this information to answer questions, troubleshoot
+      issues, handle privacy requests, and maintain necessary support
+      records.
+    </p>
+
+    <p>
+      Our email service is Spacemail by Spaceship, which processes
+      and stores correspondence to deliver the service. Please do
+      not send passwords, payment-card details, or unnecessary
+      private photos. See
+      <a href="https://www.spaceship.com/legal/privacy-policy/">
+        Spaceship’s Privacy Policy
+      </a>.
+    </p>
+
+    <h2>10. Website Hosting</h2>
+
+    <p>
+      sortglass.com is hosted on GitHub Pages. When you visit, GitHub
+      receives technical request information, including your IP
+      address, to deliver and protect the website. Its handling and
+      retention are described in the
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">
+        GitHub General Privacy Statement
+      </a>.
+    </p>
+
+    <p>
+      This privacy-policy page does not embed analytics scripts,
+      advertisements, contact forms, or tracking pixels.
+    </p>
+
+    <p>
+      Following links to other websites subjects your visit to their
+      practices. Email links open your chosen email application;
+      information is sent when you send a message.
+    </p>
+
+    <h2>11. Purposes and Legal Bases</h2>
+
+    <p>
+      Where a legal basis is required, we process information as
+      necessary to provide the features and support you request,
+      based on consent for optional processing where applicable,
+      to meet legal obligations, and for legitimate interests in
+      maintaining security, resolving technical problems, and
+      improving reliability where those interests are not
+      overridden by your rights.
+    </p>
+
+    <p>
+      A device permission is an access control and does not by
+      itself establish the legal basis for every processing activity.
+      When processing relies on consent, you can withdraw it through
+      the relevant controls or by contacting us. Withdrawal does
+      not affect the lawfulness of earlier processing.
+    </p>
+
+    <p>
+      Apple and other providers may determine their own legal bases
+      for information they process independently.
+    </p>
+
+    <h2>12. Disclosure and International Processing</h2>
+
+    <p>
+      Information is handled by the providers identified above for
+      the described services. We may disclose operator-held
+      information when legally required, to protect rights and
+      security as permitted by law, or at your direction.
+      The restrictions on TestFlight information described above
+      continue to apply.
+    </p>
+
+    <p>
+      We operate in the United States. Using our website, sending
+      support email, or using Apple services can involve processing
+      outside your country, where privacy laws may differ.
+      Providers describe their processing and transfer arrangements
+      in their linked notices.
+    </p>
+
+    <p>
+      Contact us for information about arrangements applicable to
+      operator-held information. This policy does not claim that
+      all information remains in your country or that the operator
+      is certified under an international transfer framework.
+    </p>
+
+    <p>
+      In a lawful business transfer, operator-held information may
+      transfer subject to applicable law, provider restrictions,
+      and the privacy commitments under which it was obtained.
+      A change of ownership does not automatically grant access
+      to your private Photos library or authorize incompatible
+      new uses. We will provide notice and obtain consent
+      where required.
+    </p>
+
+    <h2>13. Retention and Deletion</h2>
+
+    <p>
+      Local app information remains until removed through available
+      app controls, deletion of app data, or system storage
+      management. Offloading an app may retain its data.
+      Apple’s backups and Photos library have separate retention
+      and deletion controls.
+    </p>
+
+    <p>
+      Where optional SortGlass cloud backup is enabled, an existing
+      backup remains until successfully deleted or otherwise
+      removed through applicable Apple service processes.
+      Turning the feature off or deleting the app does not
+      automatically delete that backup.
+    </p>
+
+    <p>
+      We retain support correspondence and operator-held diagnostic
+      or beta records only as long as reasonably necessary to
+      resolve requests, investigate related problems, maintain
+      security, or meet legal obligations. When no longer needed
+      for those purposes, we delete them.
+    </p>
+
+    <p>
+      Relevant factors include whether an issue is unresolved,
+      whether a recurring defect needs investigation, and whether
+      a legal retention requirement applies. You may request
+      earlier deletion, subject to applicable exceptions.
+    </p>
+
+    <p>
+      Apple, GitHub, and Spaceship manage information in their
+      services under their own retention practices. Deleting an
+      operator-held copy does not necessarily remove a provider’s
+      independent records.
+    </p>
+
+    <p>
+      We cannot directly erase your private Photos library or
+      Apple device backups for you.
+    </p>
+
+    <h2>14. Your Choices and Privacy Rights</h2>
+
+    <p>
+      You can adjust Photos and notification permissions, clear
+      dashboard statistics, manage optional cloud backup where
+      available, manage Apple backups and subscriptions, stop
+      beta participation, and choose whether to share content
+      or contact support.
+    </p>
+
+    <p>
+      Depending on your location and applicable law, you may have
+      rights to:
+    </p>
+
+    <ul>
+      <li>Request access to personal information held about you.</li>
+      <li>Request correction or deletion.</li>
+      <li>Request a portable copy of applicable information.</li>
+      <li>Object to or restrict certain processing.</li>
+      <li>Withdraw consent where processing relies on consent.</li>
+      <li>Complain to an applicable privacy regulator.</li>
+    </ul>
+
+    <p>
+      Where applicable, you may appeal a decision by replying to
+      our response and requesting review. We will not unlawfully
+      discriminate against you for exercising privacy rights.
+    </p>
+
+    <p>
+      Send requests to
+      <a href="mailto:support@sortglass.com">support@sortglass.com</a>.
+      We may request information reasonably needed to verify your
+      identity or authority, but will not ask for your entire
+      photo library.
+    </p>
+
+    <p>
+      Rights and exceptions depend on applicable law and whether
+      information is held by us or independently by a provider.
+    </p>
+
+    <p>
+      We do not sell personal information or share it for
+      cross-context behavioral advertising. The app does not
+      track you across other companies’ apps or websites
+      for advertising.
+    </p>
+
+    <h2>15. Children and Security</h2>
+
+    <p>
+      Photo-library access does not by itself send a child’s
+      photos to the developer. If you believe a child has
+      provided personal information to us through support or
+      beta feedback without any authorization required by
+      applicable law, contact us so we can investigate and
+      take appropriate action, including deletion where required.
+    </p>
+
+    <p>
+      SortGlass relies on iOS permissions and platform storage
+      protections for local information. No device, service,
+      or transmission can be guaranteed completely secure.
+      Avoid sending unnecessary sensitive information in
+      email or feedback.
+    </p>
+
+    <h2>16. Changes to This Policy</h2>
+
+    <p>
+      We will update this policy as features or information
+      practices change and revise the date above. Where
+      required, we will provide additional notice or obtain
+      consent before implementing a change.
+    </p>
+
+    <h2>17. Contact</h2>
+
+    <p>
+      Cyrus Press<br>
+      California, United States<br>
+      <a href="mailto:support@sortglass.com">support@sortglass.com</a>
+    </p>
+  </main>
 </body>
 </html>
