@@ -223,6 +223,28 @@ symbol .fill { fill: currentColor; stroke: none; }
   color: var(--text);
   white-space: nowrap;
 }
+a.nav-pill { text-decoration: none; }
+/* The page's one call to action, so it reads as a button, not a label. */
+.nav-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--blue);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(61, 139, 255, 0.35), 0 6px 22px rgba(61, 139, 255, 0.45);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.nav-download .icon { font-size: 15px; stroke-width: 2.2; }
+.nav-download:hover {
+  background: #5a9dff;
+  box-shadow: 0 0 0 1px rgba(90, 157, 255, 0.5), 0 8px 28px rgba(61, 139, 255, 0.6);
+  transform: translateY(-1px);
+}
+.nav-download:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.section-sub a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.section-sub a:hover { text-decoration: underline; }
 
 /* ==========================================================================
    Phone mockup
@@ -430,20 +452,14 @@ symbol .fill { fill: currentColor; stroke: none; }
   margin-top: 36px;
 }
 .hero-actions.center { justify-content: center; }
+/* The App Store badge on its own line, centered, with the tour link under it. */
+.hero-actions.stacked { flex-direction: column; align-items: center; gap: 18px; }
+.store-cta { display: flex; justify-content: center; margin-top: 32px; }
 
-.store-badge {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 54px;
-  padding: 6px 22px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--line-strong);
-  line-height: 1.1;
-}
-.store-badge-small { font-size: 11px; color: var(--text-3); letter-spacing: 0.01em; }
-.store-badge-large { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+/* Apple's official badge, unaltered; Apple's marketing tools serve it. */
+.store-badge { display: inline-flex; line-height: 0; border-radius: 9px; }
+.store-badge img { display: block; width: 162px; height: 54px; }
+.store-badge:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 
 .gesture-legend {
   list-style: none;
