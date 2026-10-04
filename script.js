@@ -145,11 +145,21 @@
     render() {
       const total = DEMO_PHOTOS.length;
       const finished = this.index >= total;
+      const completing = finished && !this.el.classList.contains('finished');
+      const hadFocus = this.el.contains(document.activeElement);
       this.el.classList.toggle('finished', finished);
+      this.el.querySelectorAll('.demo-header, .demo-stage, .demo-dock').forEach((section) => {
+        section.inert = finished;
+        section.setAttribute('aria-hidden', String(finished));
+      });
+      const completion = this.el.querySelector('.demo-done');
+      completion.inert = !finished;
+      completion.setAttribute('aria-hidden', String(!finished));
       if (finished) {
         const reviewed = total;
         this.summaryEl.textContent = `${reviewed} reviewed · ${this.trash.length} in Trash · ${this.favorites.size} favorited · ${this.filed.length} filed. In the app, nothing is deleted until you confirm in Trash.`;
         announce(`Session complete. ${this.summaryEl.textContent}`);
+        if (completing && hadFocus) completion.querySelector('button').focus({ preventScroll: true });
       } else {
         const photo = this.photo;
         this.cardImg.src = photo.src;
@@ -171,6 +181,7 @@
       this.setCaption(null);
       this.card.style.transform = '';
       this.card.style.opacity = '';
+      if (this.onRender) this.onRender(finished);
     }
 
     setCaption(state, text) {
@@ -235,7 +246,11 @@
         else this.springBack();
       };
       this.card.addEventListener('pointerup', finish);
-      this.card.addEventListener('pointercancel', finish);
+      this.card.addEventListener('pointercancel', () => {
+        start = null;
+        state = null;
+        this.springBack();
+      });
     }
 
     springBack() {
@@ -355,6 +370,12 @@
     const figure = document.createElement('figure');
     figure.className = 'view';
     figure.dataset.view = item.id;
+    figure.id = `${group.id}-${item.id}-panel`;
+    if (SCREENS[group.chapter].length > 1) {
+      figure.setAttribute('role', 'tabpanel');
+      figure.setAttribute('aria-labelledby', `${group.id}-${item.id}-tab`);
+      figure.tabIndex = 0;
+    }
     if (item.type === 'img') {
       const img = document.createElement('img');
       img.src = item.src;
@@ -389,7 +410,7 @@
 
   function buildGroup(chapter, phone) {
     const items = SCREENS[chapter];
-    const group = { chapter, phone, views: new Map(), active: items[0].id, demo: null, buttons: null };
+    const group = { id: `tour-${chapter}-${groups.length}`, chapter, phone, views: new Map(), active: items[0].id, demo: null, buttons: null };
 
     group.groupEl = document.createElement('div');
     group.groupEl.className = 'screen-group';
@@ -413,10 +434,27 @@
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.setAttribute('role', 'tab');
+        btn.id = `${group.id}-${item.id}-tab`;
+        btn.setAttribute('aria-controls', `${group.id}-${item.id}-panel`);
         btn.dataset.view = item.id;
         btn.textContent = item.label;
         btn.addEventListener('click', () => setView(group, item.id));
         seg.append(btn);
+      });
+      // Roving tab order requires keyboard navigation between every screen.
+      seg.addEventListener('keydown', (event) => {
+        const buttons = Array.from(seg.querySelectorAll('[role="tab"]'));
+        const current = buttons.indexOf(event.target);
+        if (current < 0) return;
+        let next;
+        if (event.key === 'ArrowRight') next = (current + 1) % buttons.length;
+        else if (event.key === 'ArrowLeft') next = (current - 1 + buttons.length) % buttons.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = buttons.length - 1;
+        else return;
+        event.preventDefault();
+        setView(group, buttons[next].dataset.view);
+        buttons[next].focus({ preventScroll: true });
       });
       group.controlsEl.append(seg);
     }
@@ -426,12 +464,22 @@
       group.buttons = document.createElement('div');
       group.buttons.className = 'demo-buttons';
       group.buttons.innerHTML = `
+        <button type="button" class="b-prev">Previous</button>
         <button type="button" class="b-trash">${svgIcon('i-trash')}Trash</button>
         <button type="button" class="b-fav">${svgIcon('i-heart')}Favorite</button>
         <button type="button" class="b-next">${svgIcon('i-arrow-right')}Next</button>`;
       group.buttons.querySelector('.b-trash').addEventListener('click', () => demo.sendToTrash());
       group.buttons.querySelector('.b-fav').addEventListener('click', () => demo.toggleFavorite());
       group.buttons.querySelector('.b-next').addEventListener('click', () => demo.go(1));
+      group.buttons.querySelector('.b-prev').addEventListener('click', () => demo.go(-1));
+      demo.onRender = (finished) => {
+        const moveFocus = finished && group.buttons.contains(document.activeElement);
+        group.buttons.querySelectorAll('button').forEach((button) => {
+          button.disabled = finished || (button.classList.contains('b-prev') && demo.index === 0);
+        });
+        if (moveFocus) demo.el.querySelector('[data-act="restart"]').focus({ preventScroll: true });
+      };
+      demo.onRender(false);
       group.controlsEl.append(group.buttons);
     }
 
@@ -442,7 +490,12 @@
 
   function setView(group, id, silent) {
     group.active = id;
-    group.views.forEach(({ el }, key) => el.classList.toggle('active', key === id));
+    group.views.forEach(({ el }, key) => {
+      const active = key === id;
+      el.classList.toggle('active', active);
+      el.inert = !active;
+      el.setAttribute('aria-hidden', String(!active));
+    });
     group.controlsEl.querySelectorAll('[role="tab"]').forEach((btn) => {
       btn.setAttribute('aria-selected', String(btn.dataset.view === id));
       btn.tabIndex = btn.dataset.view === id ? 0 : -1;
@@ -511,8 +564,9 @@
 
   function updatePhoneState(phone) {
     if (!phone) return;
-    phone.classList.toggle('has-video', Boolean(activeVideoIn(phone)));
-    const paused = phone.classList.contains('is-paused');
+    const video = activeVideoIn(phone);
+    phone.classList.toggle('has-video', Boolean(video));
+    const paused = !video || video.paused;
     const toggle = phone.querySelector('[data-media-toggle]');
     if (toggle) {
       toggle.innerHTML = svgIcon(paused ? 'i-play' : 'i-pause');
@@ -549,16 +603,31 @@
     const toggle = phone.querySelector('[data-media-toggle]');
     if (toggle) {
       toggle.addEventListener('click', () => {
-        const paused = phone.classList.toggle('is-paused');
-        if (!paused) phone.dataset.userPlay = '1';
+        const video = activeVideoIn(phone);
+        if (!video) return;
+        const play = video.paused;
+        phone.classList.toggle('is-paused', !play);
+        if (play) phone.dataset.userPlay = '1';
         updatePhoneState(phone);
         syncVideos();
       });
     }
+    phone.querySelectorAll('video[data-autoplay]').forEach((video) => {
+      ['play', 'pause', 'error'].forEach((event) => {
+        video.addEventListener(event, () => updatePhoneState(phone));
+      });
+    });
   });
 
   document.addEventListener('visibilitychange', syncVideos);
-  if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', syncVideos);
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', () => {
+    if (reduceMotion.matches) phones.forEach((phone) => {
+      phone.classList.add('is-paused');
+      delete phone.dataset.userPlay;
+    });
+    syncVideos();
+    phones.forEach(updatePhoneState);
+  });
 
   /* ------------------------------------------------------------- tour */
   const chapters = document.querySelectorAll('[data-chapter]');
@@ -573,6 +642,10 @@
       const on = group.chapter === name;
       group.groupEl.classList.toggle('active', on);
       group.controlsEl.classList.toggle('active', on);
+      group.groupEl.inert = !on;
+      group.controlsEl.inert = !on;
+      group.groupEl.setAttribute('aria-hidden', String(!on));
+      group.controlsEl.setAttribute('aria-hidden', String(!on));
     });
     tabs.forEach((tab) => {
       const on = tab.dataset.tab === name;
@@ -611,5 +684,8 @@
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update);
   window.addEventListener('load', update);
+  // Only enable reveal hiding once setup succeeded. A blocked/failed script
+  // must never leave the marketing copy invisible.
+  document.documentElement.classList.replace('no-js', 'js');
   update();
 })();
