@@ -154,6 +154,19 @@ b, strong { font-weight: 600; color: var(--text); }
   text-transform: uppercase;
 }
 
+/* Micro chromatic aberration: a faint cyan and magenta fringe at the edges
+   of large display type, like light bending through glass. The letters stay
+   solid; the color sits under a pixel to each side, behind them. Add the
+   class to a heading to use it, and tune --ca-shift or --ca-strength there.
+   A component with its own text-shadow lists var(--ca) first in it. */
+.micro-ca {
+  --ca-shift: 0.75px;
+  --ca-strength: 0.35;
+  --ca: calc(var(--ca-shift) * -1) 0 rgb(0 255 255 / var(--ca-strength)),
+    var(--ca-shift) 0 rgb(255 0 100 / var(--ca-strength));
+  text-shadow: var(--ca);
+}
+
 /* The prism mark: three thin bands, SortGlass's signature accent. */
 /* The app's Spectrum (the hue wheel from amber), flowing through the dash
    like light through a prism: one smooth turn of the wheel spans the
@@ -660,5 +673,6 @@ b, strong { font-weight: 600; color: var(--text); }
   .nav, .footer, .toc, .skip-link { display: none !important; }
   .doc p, .doc li, .legal p, .legal li, .lede { color: #000; }
   a { color: #000; }
+  .micro-ca { --ca: 0 0 transparent; }
 }
 
