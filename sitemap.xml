@@ -2,10 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sortglass.com/</loc>
-    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://sortglass.com/guide.html</loc>
+  </url>
+  <url>
+    <loc>https://sortglass.com/support.html</loc>
   </url>
   <url>
     <loc>https://sortglass.com/privacy.html</loc>
-    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://sortglass.com/accessibility.html</loc>
   </url>
 </urlset>
