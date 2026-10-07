@@ -577,7 +577,6 @@
       var out = words[wordTurn];
       var into = words[1 - wordTurn];
       into.textContent = text;
-      into.setAttribute('data-text', text);
       out.classList.add('is-out');
       into.classList.add('is-in');
       // Long words ("Organize.") shrink to fit beside the demo.

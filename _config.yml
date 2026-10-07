@@ -1,0 +1,7 @@
+# GitHub Pages builds this site with Jekyll. Only the website itself is
+# published: notes, Markdown files and tools stay out of sortglass.com.
+exclude:
+  - README.md
+  - "*.md"
+  - tools
+  - "*.py"

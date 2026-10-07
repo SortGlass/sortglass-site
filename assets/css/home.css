@@ -555,7 +555,6 @@
   font-size: clamp(2.5rem, 11.4vw, 4.6rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
-  text-shadow: -0.6px 0 rgba(98, 225, 238, 0.35), 0.6px 0 rgba(255, 184, 79, 0.35);
 }
 .hero h1 .line { display: block; }
 .hero .lede { margin: 0 auto; color: var(--text); opacity: 0.86; }
@@ -758,11 +757,11 @@
   inset: 0;
   white-space: nowrap;
   color: #fff;
-  text-shadow: -1.5px 0 rgba(98, 225, 238, 0.55), 1.5px 0 rgba(255, 184, 79, 0.5), 0 10px 50px rgba(0, 0, 0, 0.45);
-  transition: transform 0.7s var(--ease-out), opacity 0.5s, filter 0.7s;
+  text-shadow: 0 10px 50px rgba(0, 0, 0, 0.45);
+  transition: transform 0.7s var(--ease-out), opacity 0.5s;
 }
-.stage-word.is-out { opacity: 0; transform: translateY(-28%); filter: blur(6px); }
-.stage-word.is-in { opacity: 0; transform: translateY(32%); filter: blur(6px); }
+.stage-word.is-out { opacity: 0; transform: translateY(-28%); }
+.stage-word.is-in { opacity: 0; transform: translateY(32%); }
 
 .stage-visual {
   grid-area: visual;
@@ -1508,7 +1507,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .scene img { transition: none; }
-  .stage-word.is-out, .stage-word.is-in { transform: none; filter: none; }
+  .stage-word.is-out, .stage-word.is-in { transform: none; }
 }
 
 @media (forced-colors: active) {
