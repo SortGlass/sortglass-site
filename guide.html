@@ -6,10 +6,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="no-referrer">
 
-  <title>User Guide — SortGlass</title>
-  <meta name="description" content="How to use SortGlass: the five tabs, swiping in Organize, albums and pins, ratings, filters, Trash and deleting, and SortGlass Pro.">
+  <title>User Guide | SortGlass</title>
+  <meta name="description" content="Use SortGlass on iPhone, iPad and Mac: organize Apple Photos, search by camera and lens, manage albums, choose iCloud settings, and review Trash.">
   <link rel="canonical" href="https://sortglass.com/guide.html">
-  <meta name="theme-color" content="#06070a">
+  <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark">
   <meta name="apple-itunes-app" content="app-id=6814702183">
 
@@ -26,8 +26,8 @@
   <meta property="og:image" content="https://sortglass.com/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
-  <script src="assets/js/site.js?v=3" defer></script>
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <script src="assets/js/site.js?v=10" defer></script>
 </head>
 
 <body>
@@ -41,16 +41,17 @@
 
   <header class="nav" data-nav>
     <div class="wrap nav-inner">
-      <a class="brand" href="./">
+      <a class="brand" href="./" aria-label="SortGlass home">
         <img src="icons/icon-96.png" alt="" width="28" height="28">
-        <span>SortGlass</span>
+        <span>SortGlass.</span>
       </a>
       <nav class="nav-menu" id="nav-menu" aria-label="Main">
         <ul class="nav-links">
           <li><a href="./#story">How It Works</a></li>
+          <li><a href="./#platforms">Your Devices</a></li>
+          <li><a href="./#pricing">Free &amp; Pro</a></li>
           <li><a href="guide.html" aria-current="page">User Guide</a></li>
           <li><a href="support.html">Support</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </nav>
       <a class="button nav-download" href="https://apps.apple.com/app/sortglass/id6814702183"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download</a>
@@ -67,20 +68,21 @@
       <header class="page-head">
         <p class="eyebrow"><span class="prism" aria-hidden="true"></span>User Guide</p>
         <h1>Using SortGlass</h1>
-        <p class="lede">Five tabs, one connected workflow. Here’s how each part works. You can also reopen the guide in the app at any time from More.</p>
+        <p class="lede">Learn your way around SortGlass on iPhone, iPad and Mac. You can also open the guide from More in the app.</p>
       </header>
 
       <div class="doc-layout">
-        <nav class="toc" aria-label="On this page">
+        <nav class="toc" aria-label="On this page" data-guide-toc>
           <p>On this page</p>
           <ol>
             <li><a href="#start">Getting started</a></li>
             <li><a href="#tabs">The five tabs</a></li>
-            <li><a href="#organize">Organize</a></li>
-            <li><a href="#browse">Browse</a></li>
             <li><a href="#library">Library</a></li>
+            <li><a href="#browse">Browse</a></li>
+            <li><a href="#organize">Organize</a></li>
             <li><a href="#albums">Albums</a></li>
             <li><a href="#more">More</a></li>
+            <li><a href="#devices">iPad, Mac and iCloud</a></li>
             <li><a href="#trash">Trash and deleting</a></li>
             <li><a href="#pro">Free and Pro</a></li>
           </ol>
@@ -88,20 +90,20 @@
 
         <div class="doc">
           <section id="start" aria-labelledby="start-title">
-            <h2 id="start-title">Getting started</h2>
-            <p>SortGlass works on the Apple Photos library already on your iPhone. There’s no account to create and nothing to import.</p>
+            <h2 class="tab-title" id="start-title">Getting started</h2>
+            <p>SortGlass works on the Apple Photos library on your device. There’s no SortGlass account to create and nothing to import.</p>
             <ol>
-              <li>Download SortGlass from the App Store. It requires iOS 18 or later.</li>
-              <li>When asked, allow access to your photos. You can change this later in Settings → Privacy &amp; Security → Photos → SortGlass. Restricting access limits what SortGlass can show and organize.</li>
+              <li>Download SortGlass from the App Store. It supports iPhone with iOS 18 or later, iPad with iPadOS 18 or later, and Mac with macOS 15 or later and an Apple M1 chip or later.</li>
+              <li>When asked, allow access to your photos. Review access later in More → Privacy &amp; Photos Access, or in your device’s Settings (System Settings on Mac). Restricting access limits what SortGlass can show and organize.</li>
               <li>Choose what to organize in Browse, or go straight to Organize to start with everything.</li>
             </ol>
             <div class="callout">
-              <p><b>Connected to Apple Photos.</b> Favorites, album changes, ratings on iOS 27 or later, and confirmed deletions apply to your Photos library too. Sending an item to SortGlass Trash only queues it: you review and confirm before it’s deleted from Photos.</p>
+              <p><b>Connected to Apple Photos.</b> Favorites, album changes, ratings on supported systems, and confirmed deletions apply to your Photos library too. Sending an item to SortGlass Trash only queues it: you review and confirm before it’s deleted from Photos.</p>
             </div>
           </section>
 
           <section id="tabs" aria-labelledby="tabs-title">
-            <h2 id="tabs-title">The five tabs</h2>
+            <h2 class="tab-title" id="tabs-title">The five tabs</h2>
             <ul>
               <li><b>Library:</b> see the whole library, select in bulk, and revisit your rated photos.</li>
               <li><b>Browse:</b> choose the photos and videos you want to organize.</li>
@@ -111,43 +113,8 @@
             </ul>
           </section>
 
-          <section id="organize" aria-labelledby="organize-title">
-            <h2 id="organize-title">Organize</h2>
-            <p>A little focus. A lot of progress. Organize shows one photo or video at a time, with your albums beneath it.</p>
-            <figure class="guide-figure">
-              <div class="screen"><div class="screen-glass">
-                <video controls muted playsinline preload="none" poster="assets/screens/organize-poster.webp" width="640" height="1388" aria-describedby="organize-video-text">
-                  <source src="assets/video/organize-hevc.mp4" type='video/mp4; codecs="hvc1"'>
-                  <source src="assets/video/organize.mp4" type="video/mp4">
-                </video>
-              </div></div>
-              <figcaption id="organize-video-text">A 16-second screen recording of Organize, without sound. Photos are swiped up, labeled Release to Trash, and down, labeled Release to Favorite, with the album row beneath each photo.</figcaption>
-            </figure>
-            <h3>Swipe to keep moving</h3>
-            <p>Swipe sideways to browse, down to favorite, and up to send a photo or video to Trash.</p>
-            <h3>Give photos a home</h3>
-            <p>Tap an album beneath the photo to add it. A colored album icon means it’s already there; tap again to remove it without advancing. New creates an album or folder. A photo can belong to several albums.</p>
-            <h3>Choose your strongest shots</h3>
-            <p>With Pro on iOS 27 or later, tap Set Rating, then a star. Ratings save directly to your Apple Photos library, not just SortGlass. Revisit them in Library or filter them in Browse for a second pass.</p>
-            <h3>Undo, redo, and inspect</h3>
-            <p>The curved arrows undo and redo recent actions. History lets you revisit and undo your last 100 album and Trash actions. Tap the information button for photo details.</p>
-          </section>
-
-          <section id="browse" aria-labelledby="browse-title">
-            <h2 id="browse-title">Browse</h2>
-            <p>Start with what you want to organize. A smaller, focused set is a session you can finish.</p>
-            <h3>All or Unsorted</h3>
-            <p>Start with everything, or choose Unsorted for items that are not in an album.</p>
-            <h3>Jump to a year</h3>
-            <p>The year tiles show how many matching items were taken that year. Tap a year to start there in Organize.</p>
-            <h3>Focus with Pro</h3>
-            <p>Combine filters for favorites, media and file types, albums, dates, and ratings on supported devices. With Pro, you can also customize your filters and save named combinations to use again.</p>
-            <h3>Two ways in</h3>
-            <p>Open the results in Library for a grid, or in Organize to review them one at a time.</p>
-          </section>
-
           <section id="library" aria-labelledby="library-title">
-            <h2 id="library-title">Library</h2>
+            <h2 class="tab-title" id="library-title">Library</h2>
             <p>The bigger picture, all in one place.</p>
             <figure class="guide-figure">
               <div class="screen"><div class="screen-glass">
@@ -156,17 +123,56 @@
               <figcaption>Library, with ratings shown on the grid.</figcaption>
             </figure>
             <h3>See your full library</h3>
-            <p>Browse your photos and videos. Tap an item for a closer look.</p>
+            <p>Browse your photos and videos, or search their camera, lens, file type and date details. Tap an item for a closer look.</p>
+            <h3 id="photo-location">Explore photo locations</h3>
+            <p>Open a photo’s information panel to see its available metadata. If it has a saved location, tap the map to expand it, then turn on Nearby to explore other photos taken in that area. Only photos with location information and access granted to SortGlass can appear on the map.</p>
             <h3>Work with several at once</h3>
             <p>Select multiple items to send to Trash, add to an album, or favorite.</p>
             <h3>Choose your grid</h3>
-            <p>Pinch to change the number of photos per row, from 3 to 8, and use the view options to adjust the layout.</p>
+            <p>Pinch to change the number of photos per row, and use the view options to adjust the layout. Larger screens can show more photos across. Favorite hearts and ratings can be shown on the grid.</p>
             <h3>Revisit your ratings</h3>
-            <p>See rated photos again and compare your picks. Ratings are available on iOS 27 or later.</p>
+            <p>See rated photos again and compare your picks. Ratings require Pro and a supported system; on iPhone and iPad, that means iOS 27 or iPadOS 27 or later.</p>
+          </section>
+
+          <section id="browse" aria-labelledby="browse-title">
+            <h2 class="tab-title" id="browse-title">Browse</h2>
+            <p>Choose a smaller set of photos and videos to work through.</p>
+            <h3>All or Unsorted</h3>
+            <p>Start with everything, or choose Unsorted for items that are not in an album.</p>
+            <h3>Jump to a year</h3>
+            <p>The year tiles show how many matching items were taken that year. Tap a year to start there in Organize.</p>
+            <h3>Search photo details</h3>
+            <p>Search by camera, lens, focal length, file type or date. Choose matching suggestions to narrow the results. With Pro, combine your search with filters and save combinations you use again.</p>
+            <h3>Focus with Pro</h3>
+            <p>Combine filters for favorites, media and file types, albums, dates, and ratings on supported devices. With Pro, you can also customize your filters and save named combinations to use again.</p>
+            <h3>Choose how to review</h3>
+            <p>Open the results in Library for a grid, or in Organize to review them one at a time.</p>
+          </section>
+
+          <section id="organize" aria-labelledby="organize-title">
+            <h2 class="tab-title" id="organize-title">Organize</h2>
+            <p>Review one photo or video at a time, with your albums beneath it.</p>
+            <figure class="guide-figure">
+              <div class="screen"><div class="screen-glass">
+                <video controls muted playsinline preload="none" poster="assets/screens/organize-poster.webp" width="640" height="1388" aria-describedby="organize-video-text">
+                  <source src="assets/video/organize-hevc.mp4" type='video/mp4; codecs="hvc1"'>
+                  <source src="assets/video/organize.mp4" type="video/mp4">
+                </video>
+              </div></div>
+              <figcaption id="organize-video-text">Swipe up to queue for Trash; swipe down to favorite.</figcaption>
+            </figure>
+            <h3>Swipe to keep moving</h3>
+            <p>Swipe sideways to browse, down to favorite, and up to send a photo or video to Trash.</p>
+            <h3>Give photos a home</h3>
+            <p>Tap an album beneath the photo to add it. A colored album icon means it’s already there; tap again to remove it without advancing. Tap New to create an album or folder. A photo can belong to several albums.</p>
+            <h3>Choose your strongest shots</h3>
+            <p>With Pro on a system that supports ratings, tap Set Rating, then a star. Ratings save directly to your Apple Photos library, not just SortGlass. Revisit them in Library or filter them in Browse for a second pass. On iPhone and iPad, ratings require iOS 27 or iPadOS 27 or later.</p>
+            <h3>Undo, redo, and inspect</h3>
+            <p>The curved arrows undo and redo recent actions. History lets you revisit and undo your last 100 album and Trash actions. The information panel shows available camera and lens details, album membership, and a map for items with location information.</p>
           </section>
 
           <section id="albums" aria-labelledby="albums-title">
-            <h2 id="albums-title">Albums</h2>
+            <h2 class="tab-title" id="albums-title">Albums</h2>
             <p>Everything in its place.</p>
             <figure class="guide-figure">
               <div class="screen"><div class="screen-glass">
@@ -177,13 +183,13 @@
             <h3>Browse and manage</h3>
             <p>Search for an album or folder, then open it to browse. Choose Organize Album when you want to review its contents one at a time.</p>
             <h3>Keep favorites close</h3>
-            <p>Pin frequently used albums to put them in Organize’s album row. Use the Pinned view to find them quickly.</p>
+            <p>Pin frequently used albums and folders to put them in Organize’s album row. Open a pinned folder right in the row. Use the Pinned view to find them quickly.</p>
             <h3>Arrange your workflow</h3>
-            <p>Reorder your pinned albums to put the ones you reach for most first.</p>
+            <p>Reorder your pinned albums to put the ones you reach for most first. In Albums, choose alphabetical sorting or your own order.</p>
           </section>
 
           <section id="more" aria-labelledby="more-title">
-            <h2 id="more-title">More</h2>
+            <h2 class="tab-title" id="more-title">More</h2>
             <p>Make SortGlass work for you.</p>
             <figure class="guide-figure">
               <div class="screen"><div class="screen-glass">
@@ -194,34 +200,45 @@
             <h3>Set your preferences</h3>
             <p>Adjust app behavior and the way you organize.</p>
             <h3>Make it yours</h3>
-            <p>Explore Appearance &amp; Design. Pro unlocks additional themes, icons, colors, and launch styles.</p>
+            <p>Explore Appearance &amp; Design, including preset and saved themes and custom colors. Pro unlocks additional themes, icons, colors, and launch styles.</p>
+            <h3>Check search progress</h3>
+            <p>Open Photo Search Index to see which items have been checked. Some files don’t contain camera or lens details. The optional Index with iCloud Photos scan can read missing details by downloading original photos, which can use storage, data and battery.</p>
             <h3>See your progress</h3>
             <p>Visit your dashboard for organization and cleanup statistics.</p>
             <h3>Come back anytime</h3>
             <p>You can always find the User Guide in More.</p>
           </section>
 
+          <section id="devices" aria-labelledby="devices-title">
+            <h2 class="tab-title" id="devices-title">iPad, Mac and iCloud</h2>
+            <h3>Use a bigger screen</h3>
+            <p>SortGlass supports iPad multitasking and runs on Apple silicon Macs as a Designed for iPad app. On iPad and Mac, use a mouse or trackpad to click-drag a selection, or Shift-click to select a range. Customize keys for Organize and the full-screen viewer in More → Keyboard Shortcuts.</p>
+            <h3>Choose what syncs</h3>
+            <p>In More → iCloud Sync, choose which settings to share between devices signed in to the same Apple Account: appearance, pinned albums and their order, goals, achievements, history, and keyboard shortcuts. Turn on the categories you want on each device. Your Organize position and SortGlass Trash queue stay on that device.</p>
+            <p>Photo search details have a separate optional sync setting in More → Photo Search Index. These settings are separate from iCloud Photos, which syncs changes to your Photos library according to your Apple settings.</p>
+          </section>
+
           <section id="trash" aria-labelledby="trash-title">
-            <h2 id="trash-title">Trash and deleting</h2>
+            <h2 class="tab-title" id="trash-title">Trash and deleting</h2>
             <p>Swiping up queues an item in SortGlass Trash. Nothing is deleted from your library at that point.</p>
             <ol>
               <li>Open Trash to review the queue. You can take items back out.</li>
-              <li>Choose Delete. iOS asks you to confirm.</li>
+              <li>Choose Delete. Your device asks you to confirm.</li>
               <li>Confirmed items move to Recently Deleted in Apple Photos, where Apple generally keeps them for up to 30 days unless you delete them sooner.</li>
             </ol>
             <p>To recover something after deleting it, open the Photos app, go to Recently Deleted and choose Recover.</p>
           </section>
 
           <section id="pro" aria-labelledby="pro-title">
-            <h2 id="pro-title">Free and Pro</h2>
+            <h2 class="tab-title" id="pro-title">Free and Pro</h2>
             <p>SortGlass is free to download. The free version includes up to 100 Trash and Album actions each week; Favorites, Browse, and Undo are always included. The weekly count starts again every Monday at 00:00 UTC.</p>
-            <p>SortGlass Pro unlocks unlimited organizing, star ratings (iOS 27 or later), combined and saved filters, and every theme, app icon and accent color. Every Pro feature is included with any Pro subscription or the Lifetime purchase.</p>
+            <p>SortGlass Pro unlocks unlimited organizing, star ratings on supported systems, combined and saved filters, and every theme, app icon and accent color. Every Pro feature is included with any Pro subscription or the Lifetime purchase.</p>
             <h3>Restore a purchase</h3>
-            <p>Open More → SortGlass Pro → Restore Purchases while signed in with the same Apple Account you bought Pro with.</p>
+            <p>Open More → SortGlass Pro → Restore Purchases while signed in with the Apple Account you used to buy Pro.</p>
             <h3>Cancel a subscription</h3>
-            <p>Go to Settings → your name → Subscriptions. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Deleting the app doesn’t cancel a subscription, and buying Lifetime doesn’t cancel an existing one.</p>
+            <p>On iPhone or iPad, go to Settings → your name → Subscriptions. On Mac, open your account in the App Store and choose Subscriptions. See <a href="https://support.apple.com/en-us/118428">Apple’s cancellation instructions</a>. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Deleting the app doesn’t cancel a subscription, and buying Lifetime doesn’t cancel an existing one.</p>
             <h3>Redeem an offer code</h3>
-            <p>In the App Store app, tap your account picture, then Redeem Gift Card or Code.</p>
+            <p>In SortGlass, open More → Redeem Code. On iPhone or iPad, you can also open the App Store, tap your account picture, then choose Redeem Gift Card or Code.</p>
           </section>
 
           <p class="fineprint">Need more help? <a href="support.html">Visit Support</a> or email <a href="mailto:support@sortglass.com">support@sortglass.com</a>.</p>
@@ -237,7 +254,7 @@
         <nav aria-label="Footer">
           <ul class="footer-links">
             <li><a href="./#story">How It Works</a></li>
-            <li><a href="guide.html">User Guide</a></li>
+            <li><a href="guide.html" aria-current="page">User Guide</a></li>
             <li><a href="support.html">Support</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a></li>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-0HZcYQusexc0U5w+LCsHC4gfIIjhK2XnzJhItZNWkV0='; style-src 'self'; img-src 'self' https://toolbox.marketingtools.apple.com; media-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-4AZTYDAinGKZcQTqbvIfJnMKeo2PjFHwx/R968pXByg='; style-src 'self'; img-src 'self' https://toolbox.marketingtools.apple.com; media-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="no-referrer">
 
-  <title>SortGlass — Photo Organizer for Apple Photos on iPhone</title>
-  <meta name="description" content="SortGlass organizes the Apple Photos library you already have. See one photo at a time, then favorite, rate, file it in an album or queue it for Trash with a single gesture.">
+  <title>SortGlass | Photo Organizer for iPhone, iPad &amp; Mac</title>
+  <meta name="description" content="SortGlass helps you review your Apple Photos library, favorite your best shots, organize albums and choose what to delete.">
   <link rel="canonical" href="https://sortglass.com/">
-  <meta name="theme-color" content="#050608">
+  <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark">
   <meta name="apple-itunes-app" content="app-id=6814702183">
 
@@ -23,8 +23,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SortGlass">
   <meta property="og:url" content="https://sortglass.com/">
-  <meta property="og:title" content="SortGlass — Make room for what matters.">
-  <meta property="og:description" content="A faster, more focused way to organize your Apple Photos library on iPhone. Free on the App Store.">
+  <meta property="og:title" content="SortGlass | Make room for what matters.">
+  <meta property="og:description" content="A calmer way to sort, clean and curate your Apple Photos library. Available for iPhone, iPad and Apple-silicon Mac.">
   <meta property="og:image" content="https://sortglass.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -54,7 +54,7 @@
         "@type": "MobileApplication",
         "@id": "https://sortglass.com/#app",
         "name": "SortGlass",
-        "operatingSystem": "iOS 18.0 or later",
+        "operatingSystem": "iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple silicon)",
         "applicationCategory": "MultimediaApplication",
         "url": "https://sortglass.com/",
         "downloadUrl": "https://apps.apple.com/app/sortglass/id6814702183",
@@ -65,11 +65,11 @@
   }
   </script>
 
-  <link rel="preload" as="image" href="assets/photos/bridge-800.webp" imagesrcset="assets/photos/bridge-800.webp 800w, assets/photos/bridge-1200.webp 1200w" imagesizes="(min-width: 900px) 430px, 82vw" type="image/webp">
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
-  <link rel="stylesheet" href="assets/css/home.css?v=3">
-  <script src="assets/js/site.js?v=3" defer></script>
-  <script src="assets/js/home.js?v=3" defer></script>
+  <link rel="preload" as="image" href="assets/photos/film-valley-800.webp" imagesrcset="assets/photos/film-valley-800.webp 800w, assets/photos/film-valley-1200.webp 1200w" imagesizes="(min-width: 900px) 32vw, 42vw" type="image/webp">
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <link rel="stylesheet" href="assets/css/home.css?v=17">
+  <script src="assets/js/site.js?v=10" defer></script>
+  <script src="assets/js/home.js?v=17" defer></script>
 </head>
 
 <body class="home">
@@ -78,6 +78,8 @@
   <svg class="sr-only" aria-hidden="true" focusable="false">
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11M7.5 10L12 14.5 16.5 10"/><path d="M4.5 15.5v2.5a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2.5"/></symbol>
     <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5L19 12l-5.5 5.5"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M10.5 6.5L5 12l5.5 5.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5L12 19l5.5-5.5"/></symbol>
     <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6.5 10.5L12 5l5.5 5.5"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
@@ -122,23 +124,19 @@
     <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4.5 4.5v4h4"/></symbol>
   </svg>
 
-  <div class="scene" aria-hidden="true" data-scene>
-    <img class="is-on" src="assets/photos/bridge-glow.webp" alt="" width="32" height="40">
-    <img src="assets/photos/bridge-glow.webp" alt="" width="32" height="40">
-  </div>
-
   <header class="nav" data-nav>
     <div class="wrap nav-inner">
-      <a class="brand" href="./">
+      <a class="brand" href="./" aria-label="SortGlass home" aria-current="page">
         <img src="icons/icon-96.png" alt="" width="28" height="28">
-        <span>SortGlass</span>
+        <span>SortGlass.</span>
       </a>
       <nav class="nav-menu" id="nav-menu" aria-label="Main">
         <ul class="nav-links">
           <li><a href="#story">How It Works</a></li>
+          <li><a href="#platforms">Your Devices</a></li>
+          <li><a href="#pricing">Free &amp; Pro</a></li>
           <li><a href="guide.html">User Guide</a></li>
           <li><a href="support.html">Support</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </nav>
       <a class="button nav-download" href="https://apps.apple.com/app/sortglass/id6814702183"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download</a>
@@ -151,27 +149,59 @@
   </header>
 
   <main id="main">
+    <noscript><p class="wrap fineprint">Interactive demos need JavaScript. You can still read about SortGlass, open the guide and download the app.</p></noscript>
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-title">
-          <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Photo organizer for iPhone</p>
-          <h1 id="hero-title" class="micro-ca"><span class="line">Make room</span> <span class="line">for what</span> <span class="line">matters.</span></h1>
+          <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Photo organizing. For Apple Photos.</p>
+          <h1 id="hero-title">Keep the<br><em>good ones.</em></h1>
         </div>
 
+        <div class="hero-copy">
+          <p class="lede">Review, favorite and organize your camera roll, right in the Apple Photos library you already have.</p>
+          <div class="cta-row">
+            <a class="store-badge" href="https://apps.apple.com/app/sortglass/id6814702183">
+              <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="150" height="50">
+            </a>
+            <a class="link-arrow" href="#story">How it works <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+          </div>
+          <p class="fineprint hero-note">Free to start. No ads. No SortGlass account.</p>
+          <a class="device-link" href="#platforms"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>iPhone <span>·</span> iPad <span>·</span> Mac <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <figure class="hero-photograph">
+          <div class="contact-sheet">
+            <img class="cover-photo" src="assets/photos/film-valley-800.webp" srcset="assets/photos/film-valley-800.webp 800w, assets/photos/film-valley-1200.webp 1200w" sizes="(min-width: 900px) 32vw, 42vw" alt="An orange dusk sky above dark mountains and scattered valley lights." width="800" height="1000" fetchpriority="high" decoding="async">
+            <img src="assets/photos/film-mountain-mirror-800.webp" alt="A snowy mountain and winding road reflected in a car’s side mirror." width="800" height="1000" decoding="async">
+            <img src="assets/photos/film-night-drive-360.webp" alt="Green light trails passing a parked car beneath the night sky." width="360" height="448" decoding="async">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Normal document flow; the product is the demonstration. -->
+    <section class="workflow section solid" id="story" aria-labelledby="story-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Inside SortGlass</p>
+          <h2 class="title" id="story-title">Try a few photos.</h2>
+          <p class="lede">Try sorting a few sample photos below. Pick your Favorites, add them to albums, or add unwanted shots to Trash.</p>
+        </div>
+        <div class="workflow-layout">
         <div class="hero-demo">
           <div class="rail" aria-hidden="true">
             <span class="t"><svg class="icon"><use href="#i-arrow-up"/></svg>Swipe up · Trash</span>
             <span class="f"><svg class="icon"><use href="#i-arrow-down"/></svg>Swipe down · Favorite</span>
           </div>
           <div>
-            <div class="og" data-og="hero" role="group" aria-label="Interactive demo of the Organize tab in SortGlass, with sample photos">
+            <div class="og" data-og="hero" inert role="group" aria-label="Interactive demo of the Organize tab in SortGlass, with sample photos">
               <div class="og-phone">
                 <span class="og-hw og-action" aria-hidden="true"></span><span class="og-hw og-volup" aria-hidden="true"></span><span class="og-hw og-voldown" aria-hidden="true"></span><span class="og-hw og-side" aria-hidden="true"></span><span class="og-hw og-camera" aria-hidden="true"></span>
                 <div class="og-screen">
                   <div class="og-photo" data-photo tabindex="0" aria-roledescription="sample photo" aria-describedby="og-help" aria-label="Sample photo: The Golden Gate Bridge under a pink and violet sky">
-                    <div class="og-card" data-card><img src="assets/photos/bridge-800.webp" srcset="assets/photos/bridge-800.webp 800w, assets/photos/bridge-1200.webp 1200w" sizes="(min-width: 900px) 400px, 80vw" alt="" width="800" height="1000" fetchpriority="high" decoding="async"></div>
+                    <div class="og-card" data-card><img src="assets/photos/bridge-800.webp" srcset="assets/photos/bridge-800.webp 800w, assets/photos/bridge-1200.webp 1200w" sizes="(min-width: 900px) 400px, 80vw" alt="" width="800" height="1000" loading="lazy" decoding="async"></div>
                     <button class="og-try" type="button" data-arm><span class="og-glass">Tap to try it</span></button>
                     <div class="og-done" data-empty><p>That’s every sample photo.</p><button type="button" data-restart>Start over</button></div>
                   </div>
@@ -213,175 +243,34 @@
             </div>
             <p class="sr-only" id="og-help">Up arrow queues the photo for Trash, down arrow makes it a Favorite, left and right arrows move between photos. The buttons do the same.</p>
             <p class="sr-only" aria-live="polite" data-live></p>
+            <div class="demo-controls" inert role="group" aria-label="Try the sample photos">
+              <button type="button" data-demo-action="previous" aria-label="Previous sample photo">←</button>
+              <button type="button" data-demo-action="favorite"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Favorite</button>
+              <button type="button" data-demo-action="trash"><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>Add to Trash</button>
+              <button type="button" data-demo-action="next" aria-label="Next sample photo">→</button>
+              <button type="button" data-demo-action="exit" hidden>Exit demo</button>
+            </div>
             <div class="demo-meta">
-              <p class="fineprint">A demo with sample photos. It can’t see or change your library.</p>
               <button class="demo-pause" type="button" data-pause hidden><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span>Pause demo</span></button>
             </div>
           </div>
         </div>
-
-        <div class="hero-copy">
-          <p class="lede">SortGlass is a faster, more focused way to organize the Apple Photos library you already have. See one photo at a time, then favorite it, rate it, file it in an album or queue it for Trash, each with a single gesture.</p>
-          <div class="cta-row">
-            <a class="store-badge" href="https://apps.apple.com/app/sortglass/id6814702183">
-              <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="150" height="50">
-            </a>
-            <a class="link-arrow" href="#story">How it works <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+          <div class="workflow-copy">
+            <ol class="workflow-list">
+              <li><span class="step-number" aria-hidden="true">01</span><div><h3>Review</h3>
+                <dl class="gesture-guide">
+                  <div class="gesture-favorite"><dt><span aria-hidden="true">↓</span>Swipe down</dt><dd>Favorite</dd></div>
+                  <div class="gesture-trash"><dt><span aria-hidden="true">↑</span>Swipe up</dt><dd>Add to Trash</dd></div>
+                  <div class="gesture-next"><dt><span aria-hidden="true">↔</span>Swipe sideways</dt><dd>Next or previous photo</dd></div>
+                </dl>
+                <p class="fineprint">Review Trash and confirm before anything is deleted.</p>
+              </div></li>
+              <li><span class="step-number" aria-hidden="true">02</span><div><h3>Organize</h3><p>Keep your albums and folders close. Add a photo with a tap, or use star ratings to mark your strongest shots.</p><p class="fineprint">Ratings require Pro and supported system software.</p></div></li>
+              <li><span class="step-number" aria-hidden="true">03</span><div><h3>Find</h3><p>Search by camera, file type or date. Combine and save custom filters with Pro for the sets you return to often.</p><p class="fineprint">Camera and lens results depend on the metadata in each file.</p></div></li>
+            </ol>
+            <a class="link-arrow workflow-link" href="guide.html">Read the user guide <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
           </div>
-          <p class="fineprint hero-note">Free to download, with optional Pro. Requires iOS 18 or later.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ===================== STORY ===================== -->
-    <section class="story" id="story" aria-labelledby="story-title" data-story>
-      <div class="wrap story-intro">
-        <p class="eyebrow"><span class="prism" aria-hidden="true"></span>How it works</p>
-        <h2 class="title" id="story-title">From camera roll to curated, one gesture at a time.</h2>
-      </div>
-
-      <div class="stage" data-stage data-beat="swipe" aria-hidden="true" inert>
-        <div class="stage-inner">
-          <div class="stage-wordbox">
-            <span class="stage-word micro-ca" data-word>Swipe.</span>
-            <span class="stage-word micro-ca is-in" data-word></span>
-          </div>
-          <div class="stage-visual">
-            <div class="plane plane-albums">
-              <div class="og-phone">
-                <span class="og-hw og-action" aria-hidden="true"></span><span class="og-hw og-volup" aria-hidden="true"></span><span class="og-hw og-voldown" aria-hidden="true"></span><span class="og-hw og-side" aria-hidden="true"></span><span class="og-hw og-camera" aria-hidden="true"></span>
-                <div class="og-screen">
-                  <img class="og-shot" src="assets/screens/albums.webp" alt="" width="640" height="1388" loading="lazy" decoding="async">
-                  <div class="og-island" aria-hidden="true"></div>
-                </div>
-              </div>
-            </div>
-            <div class="og" data-og="story">
-              <div class="og-phone">
-                <span class="og-hw og-action" aria-hidden="true"></span><span class="og-hw og-volup" aria-hidden="true"></span><span class="og-hw og-voldown" aria-hidden="true"></span><span class="og-hw og-side" aria-hidden="true"></span><span class="og-hw og-camera" aria-hidden="true"></span>
-                <div class="og-screen">
-                  <div class="og-photo" data-photo>
-                    <div class="og-card" data-card><img src="assets/photos/redsun-800.webp" srcset="assets/photos/redsun-800.webp 800w, assets/photos/redsun-1200.webp 1200w" sizes="(min-width: 900px) 400px, 80vw" alt="" width="800" height="1000" loading="lazy" decoding="async"></div>
-                    <button class="og-try" type="button" data-arm><span class="og-glass">Tap to try it</span></button>
-                    <div class="og-done" data-empty><p>That’s every sample photo.</p><button type="button" data-restart>Start over</button></div>
-                  </div>
-                  <div class="og-head og-glass">
-                    <button class="og-btn og-hist" type="button" aria-label="History" data-act="history"><svg class="icon" aria-hidden="true"><use href="#i-history"/></svg></button>
-                    <p class="og-title"><b>ALL</b>· <span data-pos>12</span> / 248</p>
-                    <button class="og-btn og-trash" type="button" aria-label="Trash" data-act="trash-view"><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg><span class="og-badge" data-badge hidden>0</span></button>
-                    <button class="og-btn og-sort" type="button" aria-label="Sort" data-act="sort"><svg class="icon" aria-hidden="true"><use href="#i-sort"/></svg></button>
-                    <button class="og-btn og-infob" type="button" aria-label="Details" aria-pressed="false" data-act="info"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg></button>
-                    <span class="og-date" data-date>Jun 30, 2016 at 8:25 PM</span>
-                    <button class="og-heart" type="button" aria-pressed="false" aria-label="Favorite" data-act="favorite"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-                    <button class="og-btn og-undo" type="button" aria-label="Undo" data-act="undo" disabled><svg class="icon" aria-hidden="true"><use href="#i-undo"/></svg></button>
-                    <button class="og-btn og-redo" type="button" aria-label="Redo" data-act="redo" disabled><svg class="icon" aria-hidden="true"><use href="#i-redo"/></svg></button>
-                  </div>
-                  <div class="og-status" aria-hidden="true">
-                    <span class="og-time">9:41</span>
-                    <span class="og-sys"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.2c2.4 0 4.6.9 6.3 2.4l1.2-1.3A11 11 0 0 0 8 .4 11 11 0 0 0 .5 3.3l1.2 1.3A9.2 9.2 0 0 1 8 2.2zm0 3.6c1.4 0 2.7.5 3.7 1.4l1.2-1.3A7.4 7.4 0 0 0 8 4a7.4 7.4 0 0 0-4.9 1.9l1.2 1.3c1-.9 2.3-1.4 3.7-1.4zM8 9.4c.5 0 1 .2 1.3.5L8 11.6 6.7 9.9c.3-.3.8-.5 1.3-.5z"/></svg><svg viewBox="0 0 27 12"><rect x="0.5" y="0.5" width="23" height="11" rx="3.5" fill="none" stroke="#fff" stroke-opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2.2"/><rect x="24.6" y="4" width="1.6" height="4" rx=".8" fill-opacity=".45"/></svg></span>
-                  </div>
-                  <div class="og-island" aria-hidden="true"></div>
-                  <div class="og-note og-glass" data-note aria-hidden="true"></div>
-                  <div class="og-info og-glass" data-info></div>
-                  <div class="og-dock og-glass">
-                    <p class="og-caption" data-caption aria-hidden="true">Add to Album</p>
-                    <div class="og-rating og-glass" data-rating role="group" aria-label="Rating"><button class="og-star" type="button" data-star="1" aria-label="1 star"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></button><button class="og-star" type="button" data-star="2" aria-label="2 stars"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></button><button class="og-star" type="button" data-star="3" aria-label="3 stars"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></button><button class="og-star" type="button" data-star="4" aria-label="4 stars"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></button><button class="og-star" type="button" data-star="5" aria-label="5 stars"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></button></div>
-                    <div class="og-chips">
-                      <button class="og-chip og-setrating" type="button" aria-pressed="false" data-act="setrating"><svg class="icon" aria-hidden="true"><use href="#i-star-half"/></svg>Set Rating</button>
-                      <button class="og-chip" type="button" aria-pressed="false" data-album="Sunsets 🌅" aria-label="Add to album Sunsets"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg>Sunsets 🌅</button><button class="og-chip" type="button" aria-pressed="false" data-album="Night Sky ✨" aria-label="Add to album Night Sky"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg>Night Sky ✨</button><button class="og-chip" type="button" aria-pressed="false" data-album="Flowers 🌺" aria-label="Add to album Flowers"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg>Flowers 🌺</button><button class="og-chip" type="button" aria-pressed="false" data-album="Travel ✈️" aria-label="Add to album Travel"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg>Travel ✈️</button>
-                    </div>
-                    <div class="og-tabs og-glass" aria-hidden="true">
-                      <span><svg class="icon"><use href="#i-tab-library"/></svg>Library</span>
-                      <span><svg class="icon"><use href="#i-tab-browse"/></svg>Browse</span>
-                      <span class="is-on"><svg class="icon"><use href="#i-stack"/></svg>Organize</span>
-                      <span><svg class="icon"><use href="#i-tab-albums"/></svg>Albums</span>
-                      <span><svg class="icon"><use href="#i-tab-more"/></svg>More</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="plane plane-browse">
-              <div class="browse og-glass">
-                <div class="browse-head"><b>BROWSE</b><span>What would you like to organize?</span></div>
-                <div class="browse-search"><svg class="icon"><use href="#i-search"/></svg>Camera, file type, lens or date</div>
-                <span class="browse-soon">Search: in development</span>
-                <p class="browse-label">FILTERS</p>
-                <div class="browse-grid" data-filters>
-                  <span class="bchip is-on" data-f="all"><svg class="icon"><use href="#i-photos"/></svg>All<small>248</small></span>
-                  <span class="bchip" data-f="unsorted"><svg class="icon"><use href="#i-tray"/></svg>Unsorted<small>96</small></span>
-                  <span class="bchip" data-f="favorites"><svg class="icon"><use href="#i-heart"/></svg>Favorites<small>31</small></span>
-                  <span class="bchip" data-f="type"><svg class="icon"><use href="#i-file"/></svg>File Type</span>
-                  <span class="bchip" data-f="rated"><svg class="icon"><use href="#i-star"/></svg>Rated<small>27</small></span>
-                  <span class="bchip" data-f="videos"><svg class="icon"><use href="#i-video"/></svg>Videos<small>12</small></span>
-                </div>
-                <p class="browse-foot" data-matches>248 matching items</p>
-                <div class="browse-actions"><span>Open in Library</span><span>Open in Organize</span></div>
-              </div>
-            </div>
-            <div class="plane plane-grid">
-              <div class="libgrid og-glass" data-grid>
-                <div class="libgrid-bar"><b>LIBRARY</b><span>Select</span></div>
-                <ul>
-                  <li data-rated="5"><img src="assets/photos/milkyway-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★★★</span></li>
-                  <li><img src="assets/photos/canyon-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars"></span></li>
-                  <li data-rated="4"><img src="assets/photos/rose-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★★</span></li>
-                  <li data-rated="5"><img src="assets/photos/bridge-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★★★</span></li>
-                  <li><img src="assets/photos/dusk-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars"></span></li>
-                  <li data-rated="3"><img src="assets/photos/hibiscus-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★</span></li>
-                  <li data-rated="4"><img src="assets/photos/ocean-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★★</span></li>
-                  <li><img src="assets/photos/fern-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars"></span></li>
-                  <li data-rated="4"><img src="assets/photos/redsun-sq.webp" alt="" width="600" height="600" loading="lazy" decoding="async"><span class="stars">★★★★</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="stage-caption">
-            <p data-caption-text>Swipe up to queue a photo for Trash, down to make it a Favorite, and sideways to move on.</p>
-            <span class="tag" data-caption-tag hidden></span>
-          </div>
-          <ol class="stage-dots"><li class="is-on"></li><li></li><li></li><li></li><li></li></ol>
-        </div>
-      </div>
-
-      <div class="beats wrap">
-        <article class="beat" data-beat="swipe" data-fill="ocean">
-          <h3 class="beat-word">Swipe.</h3>
-          <p>Swipe up to queue a photo for Trash, down to make it a Favorite, and sideways to move on.</p>
-          <figure class="beat-shot"><div class="screen"><div class="screen-glass">
-            <img src="assets/screens/organize.webp" alt="Organize in SortGlass: a photo being swiped up, with the label Release to Trash." width="640" height="1388" loading="lazy" decoding="async">
-          </div></div></figure>
-        </article>
-        <article class="beat" data-beat="rate" data-fill="bridge" data-tag="SortGlass Pro · iOS 27 or later">
-          <h3 class="beat-word">Rate.</h3>
-          <p>Tap Set Rating, then a star. The rating is saved in Apple Photos, and the next photo comes up.</p>
-          <span class="tag">SortGlass Pro · iOS 27 or later</span>
-          <figure class="beat-shot"><div class="screen"><div class="screen-glass">
-            <img src="assets/screens/library-rated.webp" alt="The Library grid with each photo’s star rating in its corner." width="640" height="1388" loading="lazy" decoding="async">
-          </div></div></figure>
-        </article>
-        <article class="beat" data-beat="organize" data-fill="canyon">
-          <h3 class="beat-word">Organize.</h3>
-          <p>Tap an album beneath the photo to file it there. Pin the albums you use most, in the order you like.</p>
-          <figure class="beat-shot"><div class="screen"><div class="screen-glass">
-            <img src="assets/screens/albums.webp" alt="The Albums tab with folders and pinned albums." width="640" height="1388" loading="lazy" decoding="async">
-          </div></div></figure>
-        </article>
-        <article class="beat" data-beat="find" data-fill="dusk" data-tag="Combined filters: SortGlass Pro">
-          <h3 class="beat-word">Find.</h3>
-          <p>Browse narrows your library by favorites, file type, albums, dates or ratings, so every session has a finish line.</p>
-          <span class="tag">Combined filters: SortGlass Pro</span>
-          <figure class="beat-shot"><div class="screen"><div class="screen-glass">
-            <img src="assets/screens/browse.webp" alt="The Browse tab in a development build, with filters such as All, Unsorted, File Type, Favorites, Albums and Rated." width="640" height="1388" loading="lazy" decoding="async">
-          </div></div></figure>
-        </article>
-        <article class="beat" data-beat="done" data-fill="rose">
-          <h3 class="beat-word">Done.</h3>
-          <p>Every decision is already in Apple Photos. Nothing to export, no second library to keep.</p>
-          <figure class="beat-shot"><div class="screen"><div class="screen-glass">
-            <img src="assets/screens/library-large.webp" alt="The Library tab showing an organized grid of photos." width="640" height="1388" loading="lazy" decoding="async">
-          </div></div></figure>
-        </article>
       </div>
     </section>
 
@@ -389,29 +278,30 @@
     <section class="section solid" id="one-library" aria-labelledby="one-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Built on Apple Photos</p>
-          <h2 class="title" id="one-title">No second photo library.</h2>
-          <p class="lede">SortGlass works on the Photos library you already have. Try it: each action on the left shows up in your library on the right.</p>
+          <p class="eyebrow"><span class="prism" aria-hidden="true"></span>The methodology</p>
+          <h2 class="title" id="one-title">Works in sync with Apple Photos.</h2>
+          <p class="lede">Favorite and organize in SortGlass, and your changes appear seamlessly in Apple’s Photos app. Both use the same library, so there’s no export, second library, or separate sync step.</p>
         </div>
 
         <div class="one" data-one>
-          <div class="one-pane og-glass">
+          <div class="one-pane">
             <h3><img src="icons/icon-96.png" alt="" width="24" height="24" loading="lazy">In SortGlass</h3>
             <div class="one-photo" data-one-photo>
-              <img src="assets/photos/dusk-800.webp" alt="Sample photo: a plant silhouetted against a dusk sky." width="800" height="1000" loading="lazy" decoding="async">
+              <img src="assets/photos/film-red-sunset-800.webp" srcset="assets/photos/film-red-sunset-800.webp 800w, assets/photos/film-red-sunset-1200.webp 1200w" sizes="(min-width: 761px) 40vw, 90vw" alt="A red sun sinking into the dark ocean." width="800" height="1000" loading="lazy" decoding="async">
               <div class="chiprow" aria-hidden="true"><span data-chip-fav></span><span data-chip-rate></span><span data-chip-album></span></div>
             </div>
-            <div class="one-actions">
+            <div class="one-actions" inert>
               <button class="a-fav" type="button" aria-pressed="false" data-one-act="fav"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Favorite</button>
-              <button class="a-album" type="button" aria-pressed="false" data-one-act="album"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg>Add to Sunsets</button>
+              <button class="a-album" type="button" aria-pressed="false" data-one-act="album"><svg class="icon" aria-hidden="true"><use href="#i-stack"/></svg><span>Add to “Sunsets” Album</span></button>
               <button class="a-rate" type="button" aria-pressed="false" data-one-act="rate"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Rate 4 stars</button>
-              <button class="a-trash" type="button" aria-pressed="false" data-one-act="trash"><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>Queue for Trash</button>
-              <button class="button one-confirm" type="button" data-one-act="delete" hidden>Delete from Trash (iOS asks to confirm)</button>
+              <button class="a-trash" type="button" aria-pressed="false" data-one-act="trash"><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>Add to Trash</button>
+              <button class="button one-confirm" type="button" data-one-act="delete" hidden>Delete from Trash (your device asks to confirm)</button>
             </div>
           </div>
-          <div class="one-beam" aria-hidden="true" data-one-beam><span class="og-glass"><svg class="icon"><use href="#i-arrow-right"/></svg></span></div>
-          <div class="one-pane og-glass">
-            <h3><svg class="icon" aria-hidden="true"><use href="#i-photos"/></svg>In your Apple Photos library</h3>
+          <div class="one-beam" aria-hidden="true"><span><span class="one-arrow-glow"></span></span></div>
+          <div class="one-pane">
+            <h3>Apple Photos</h3>
+            <p class="one-app-label">The Photos app built into your iPhone, iPad and Mac.</p>
             <ul class="one-state" aria-live="polite">
               <li data-row="fav"><span class="k">Favorites</span><span class="v" data-v-fav>Not a favorite</span></li>
               <li data-row="album"><span class="k">Album “Sunsets”</span><span class="v" data-v-album>Not in this album</span></li>
@@ -421,46 +311,66 @@
           </div>
         </div>
         <div class="one-foot">
-          <p class="fineprint">A demo, not your library. In the app, ratings need SortGlass Pro and iOS 27 or later, and with iCloud Photos these changes sync to your other devices according to your Apple settings.</p>
-          <button class="button button-quiet" type="button" data-one-act="reset"><svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg>Reset demo</button>
+          <p class="fineprint">Trash is a queue until you confirm deletion. Ratings require SortGlass Pro and iOS 27 or iPadOS 27 or later on iPhone and iPad. Updates on other devices depend on your iCloud Photos settings and connection.</p>
+          <button class="button button-quiet" type="button" data-one-act="reset" inert><svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg>Reset demo</button>
         </div>
       </div>
     </section>
 
-    <!-- ===================== EVERYDAY → POWER ===================== -->
-    <section class="solid" id="range" aria-labelledby="range-title">
-      <div class="wrap" id="range-head">
+
+    <!-- ===================== EVERYDAY AND CAMERA DETAILS ===================== -->
+    <section class="section photo-stories" id="range" aria-labelledby="range-title">
+      <div class="wrap">
         <div class="section-head">
           <p class="eyebrow"><span class="prism" aria-hidden="true"></span>For every library</p>
-          <h2 class="title" id="range-title">Simple when you want it. Deep when you need it.</h2>
+          <h2 class="title" id="range-title">Make sense of your camera roll.</h2>
         </div>
       </div>
-      <div class="split">
-        <div class="side">
-          <div class="side-photo"><img src="assets/photos/ocean-wide-1600.webp" srcset="assets/photos/ocean-wide-1600.webp 1600w, assets/photos/ocean-wide-2400.webp 2400w" sizes="(min-width: 900px) 50vw, 100vw" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
-          <span class="tag">Trips · Family · Big libraries</span>
-          <h3>Cleaning up last weekend’s photos?</h3>
-          <ul>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg><span>One photo at a time. No grid to scan, no menus.</span></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-tray"/></svg><span>Unsorted shows only what isn’t in an album yet.</span></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Free includes 100 Trash and Album actions every week.</span></li>
-          </ul>
-          <figure><img src="assets/screens/library-large-rows.webp" alt="Part of the Library tab with large thumbnails, three photos per row." width="616" height="426" loading="lazy" decoding="async"></figure>
-        </div>
-        <div class="side">
-          <div class="side-photo"><img src="assets/photos/milkyway-wide-1600.webp" srcset="assets/photos/milkyway-wide-1600.webp 1600w, assets/photos/milkyway-wide-2400.webp 2400w" sizes="(min-width: 900px) 50vw, 100vw" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
-          <span class="tag">Photographers · Power users</span>
-          <h3>Culling hundreds of camera photos?</h3>
-          <ul>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span>Star ratings saved to Apple Photos. <span class="fineprint">Pro, iOS 27 or later.</span></span></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg><span>Combined, saved filters to come back to any selection. <span class="fineprint">Pro.</span></span></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-select"/></svg><span>Select many in the Library, then act once.</span></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg><span>Details for every shot. Search by camera and lens is <span class="status status-dev">In development</span></span></li>
-          </ul>
-          <ul class="exif" aria-label="Details of this photo">
-            <li>NIKON D7100</li><li>11–16 mm f/2.8 at 11 mm</li><li>30 s</li><li>ƒ/2.8</li><li>ISO 1000</li>
-          </ul>
-        </div>
+      <div class="wrap photo-story-grid">
+        <article class="photo-story photo-story-weekend" aria-labelledby="weekend-title">
+          <img class="photo-story-backdrop" src="assets/photos/x100-sunset-street-bg-1200.webp" srcset="assets/photos/x100-sunset-street-bg-1200.webp 1200w, assets/photos/x100-sunset-street-bg-2000.webp 2000w" sizes="(min-width: 1800px) 50vw, (min-width: 900px) 896px, (min-width: 656px) 100vw, 656px" alt="" width="1200" height="1680" loading="lazy" decoding="async">
+          <div class="photo-story-copy">
+            <p class="eyebrow">The everyday edit</p>
+            <h3 id="weekend-title">Cleaning up last weekend’s photos?</h3>
+            <p>Pick a date in Browse. Favorite the keepers and sort them into albums in Organize.</p>
+            <a class="link-arrow" href="guide.html#browse">Find your starting point <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <div class="weekend-photos" role="group" aria-label="A few weekend photos">
+              <img src="assets/photos/x100-redwoods-thumb-480.webp" alt="Sunlight through redwood branches." width="480" height="720" loading="lazy" decoding="async">
+              <img src="assets/photos/x100-alpine-rain-thumb-480.webp" alt="A village street after the rain." width="480" height="600" loading="lazy" decoding="async">
+              <img src="assets/photos/x100-foggy-coast-540.webp" alt="A misty, rocky coastline." width="540" height="360" loading="lazy" decoding="async">
+              <img src="assets/photos/x100-peach-rose-thumb-480.webp" alt="A peach rose in the garden." width="480" height="600" loading="lazy" decoding="async">
+              <img src="assets/photos/x100-neon-waterfront-thumb-960.webp" alt="Neon lights on the waterfront." width="960" height="640" loading="lazy" decoding="async">
+              <img src="assets/photos/x100-sunset-street-800.webp" alt="A neighborhood beneath a pink evening sky." width="800" height="1121" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+        <article class="photo-story photo-story-details" id="details" aria-labelledby="details-title" data-metadata-showcase>
+          <button class="metadata-images" type="button" data-metadata-images aria-label="Photo example" aria-describedby="metadata-photo-caption" disabled>
+            <img class="metadata-image is-current" data-photo="fern" src="assets/photos/fern-1200.webp" srcset="assets/photos/fern-800.webp 800w, assets/photos/fern-1200.webp 1200w" sizes="(min-width: 1800px) 50vw, (min-width: 900px) 896px, (min-width: 656px) 100vw, 656px" alt="A fern frond lit against a dark forest floor." width="1200" height="1500" loading="lazy" decoding="async">
+          </button>
+          <div class="photo-story-copy">
+            <p class="eyebrow">A closer look</p>
+            <h3 id="details-title">Details for every shot.</h3>
+            <p>Explore each photo’s metadata, from camera and lens to exposure. Find more shots with the same camera or lens.</p>
+            <div class="metadata-example" role="region" aria-label="Photo metadata examples">
+              <div class="metadata-details" data-metadata-details>
+                <span class="sr-only" id="metadata-photo-caption" data-metadata-caption>A fern frond lit against a dark forest floor</span>
+                <p class="metadata-camera" data-metadata-camera>FUJIFILM X100VI</p>
+                <dl class="metadata-fields">
+                  <div><dt>Lens</dt><dd data-metadata-lens>23 mm</dd></div>
+                  <div><dt>Aperture</dt><dd data-metadata-aperture>ƒ/2</dd></div>
+                  <div><dt>Shutter</dt><dd data-metadata-shutter>1/320 s</dd></div>
+                  <div><dt>ISO</dt><dd data-metadata-iso>64</dd></div>
+                  <div><dt>Captured</dt><dd data-metadata-date>Mar 13, 2026 • 12:23 PM</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div class="photo-location">
+              <a class="link-arrow" href="guide.html#photo-location"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Explore nearby photos <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              <p>Open a photo’s location map and turn on Nearby to see other photos taken around it.</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -470,8 +380,8 @@
         <div class="yours">
           <div class="yours-copy">
             <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Appearance</p>
-            <h2 class="title" id="yours-title">Make it yours.</h2>
-            <p class="lede">SortGlass is entirely yours to customize. Choose Light or Dark, a background, an accent color, even the color of the favorite heart, and mix them however you like.</p>
+            <h2 class="title" id="yours-title">Make SortGlass yours.</h2>
+            <p class="lede">Choose a background, an accent and a heart color. Keep it flat, make it vibrant, or save a combination that feels like you. Your photos. Your SortGlass.</p>
           </div>
           <div class="yours-demo" aria-hidden="true" inert data-theme-demo>
             <div class="og" data-og="theme">
@@ -520,7 +430,7 @@
               </div>
             </div>
           </div>
-          <div class="yours-pick">
+          <div class="yours-pick" inert>
             <p class="yours-label" id="themes-label">A few combinations to try</p>
             <div class="themes" role="group" aria-labelledby="themes-label" data-themes>
               <button class="theme" type="button" aria-pressed="true" data-theme="0"><span class="sw t0" aria-hidden="true"></span><span>System · SortGlass Blue</span></button>
@@ -535,10 +445,11 @@
             </div>
             <button class="demo-pause" type="button" data-theme-pause hidden><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
           </div>
-          <p class="fineprint yours-note">Free includes SortGlass Blue on the System background. SortGlass Pro unlocks every background, accent color, heart color and app icon, plus launch styles. On iOS 26 and later, SortGlass uses Apple’s Liquid Glass design.</p>
+          <p class="fineprint yours-note">Free includes SortGlass Blue on the System background. SortGlass Pro unlocks every background, accent color, heart color and app icon, plus launch styles. Apple’s Liquid Glass design appears on supported systems, including iOS 26 or later and iPadOS 26 or later.</p>
         </div>
 
-        <h3 class="icons-title">21 app icons</h3>
+        <div class="icon-collection" aria-labelledby="icons-title">
+        <h3 class="icons-title" id="icons-title">21 app icons. Find your favorite.</h3>
         <ul class="icons" aria-label="SortGlass app icons">
           <li><img src="assets/app-icons/01-pearl.webp" alt="Pearl White app icon" width="192" height="192" loading="lazy" decoding="async"></li>
           <li><img src="assets/app-icons/02-opal.webp" alt="Opal app icon" width="192" height="192" loading="lazy" decoding="async"></li>
@@ -563,6 +474,7 @@
           <li><img src="assets/app-icons/21-pop.webp" alt="Pop app icon" width="192" height="192" loading="lazy" decoding="async"></li>
         </ul>
         <p class="fineprint icons-note">Pearl White and Opal are free; SortGlass Pro unlocks the rest.</p>
+        </div>
       </div>
     </section>
 
@@ -571,18 +483,20 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Apple devices</p>
-          <h2 class="title" id="platforms-title">iPhone, iPad and Mac.</h2>
+          <h2 class="title" id="platforms-title">At home on your devices.</h2>
+          <p class="lede">Quick sessions on iPhone. A bigger canvas on iPad. Familiar keyboard and pointer controls on your Mac.</p>
         </div>
         <ul class="devices">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><b>iPhone</b><span class="status status-now">Available now</span><span>iOS 18 or later</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-tablet"/></svg><b>iPad</b><span class="status status-dev">Coming in version 1.1</span><span>iPadOS 18 or later</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-laptop"/></svg><b>Mac</b><span class="status status-dev">Coming in version 1.1</span><span>Mac with Apple silicon</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><b>iPhone</b><span>iOS 18 or later</span><p>Fast, one-handed sessions. A few minutes can make a difference.</p></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-tablet"/></svg><b>iPad</b><span>iPadOS 18 or later</span><p>Portrait, landscape and flexible windows. Make space for your photos.</p></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-laptop"/></svg><b>Mac</b><span>macOS 15 or later · M1 or later</span><p>The Designed for iPad app, with keyboard shortcuts and pointer selection.</p></li>
         </ul>
         <ul class="os-notes">
-          <li><b>Liquid Glass</b>The Liquid Glass design appears on iOS 26 and later.</li>
-          <li><b>Star ratings</b>Require iOS 27 or later and SortGlass Pro.</li>
-          <li><b>iCloud Photos</b>Favorites, albums, ratings and deletions sync according to your Apple settings.</li>
+          <li><b>Liquid Glass</b>Appears on supported systems, including iOS 26 or later and iPadOS 26 or later.</li>
+          <li><b>Star ratings</b>Require Pro and a supported system. On iPhone and iPad, that means iOS 27 or iPadOS 27 or later.</li>
+          <li><b>iCloud Photos</b>Favorites, albums, ratings on supported systems, and confirmed deletions sync according to your Apple settings.</li>
         </ul>
+        <div class="sync-note"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg><p><strong>Bring your setup with you.</strong> Optional private iCloud sync carries supported settings, pinned albums and search metadata between your devices. You choose what to sync. Photos themselves stay in Apple Photos.</p></div>
       </div>
     </section>
 
@@ -591,7 +505,7 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow"><span class="prism" aria-hidden="true"></span>Pricing</p>
-          <h2 class="title" id="pricing-title">Free to start. Pro when you’re ready.</h2>
+          <h2 class="title" id="pricing-title">Start free. Go further with Pro.</h2>
         </div>
         <div class="compare">
           <div>
@@ -608,7 +522,7 @@
             <h3>SortGlass Pro <span>Everything in Free, plus</span></h3>
             <ul>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Unlimited organizing and cleanup</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Star ratings (iOS 27 or later)</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Star ratings on supported systems</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Combined and saved filters</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All themes, app icons and accent colors</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Heart colors and launch styles</li>
@@ -617,16 +531,16 @@
         </div>
         <h3 class="sr-only">Pro purchase options</h3>
         <ul class="plans">
-          <li class="plan"><span class="plan-name">Weekly</span><span class="plan-price">$5.99<span>/week</span></span><span class="plan-note">Renews every week</span></li>
-          <li class="plan"><span class="plan-name">Monthly</span><span class="plan-price">$9.99<span>/month</span></span><span class="plan-note">7-day free trial for eligible new subscribers</span></li>
-          <li class="plan"><span class="plan-name">Yearly</span><span class="plan-price">$49.99<span>/year</span></span><span class="plan-note">7-day free trial for eligible new subscribers</span></li>
+          <li class="plan"><span class="plan-name">Weekly</span><span class="plan-price">$5.99<span>/ week</span></span><span class="plan-note">Renews weekly. No free trial.</span></li>
+          <li class="plan"><span class="plan-name">Monthly</span><span class="plan-price">$9.99<span>/ month</span></span><span class="plan-note">7-day free trial for eligible new subscribers, then $9.99/month.</span></li>
+          <li class="plan"><span class="plan-name">Yearly</span><span class="plan-price">$49.99<span>/ year</span></span><span class="plan-note">7-day free trial for eligible new subscribers, then $49.99/year.</span></li>
         </ul>
         <details class="other-options">
           <summary>Other purchase options<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-          <div class="plan plan-lifetime"><span class="plan-name">Lifetime</span><span class="plan-price">$59.99<span>once</span></span><span class="plan-note">One payment, not a subscription. All of Pro, for good.</span></div>
+          <div class="plan plan-lifetime"><span class="plan-name">Lifetime</span><span class="plan-price">$14.99<span>once</span></span><span class="plan-note">One purchase. All of Pro. No subscription.</span></div>
         </details>
         <div class="pricing-foot">
-          <p class="fineprint">Prices are in US dollars. The App Store shows the price for your country, and prices can change. One free trial per Apple Account across SortGlass Pro subscriptions. Subscriptions renew automatically at the listed price, including after a free trial, unless canceled at least 24 hours before the end of the current period. Manage or cancel in your Apple Account settings. Buying Lifetime doesn’t cancel an existing subscription.</p>
+          <p class="fineprint">Prices shown in USD for the US App Store. Prices and offers may vary by region; confirm the current price in SortGlass before purchasing. One free trial per Apple Account across Pro subscriptions. Subscriptions renew automatically, including after a trial, unless canceled at least 24 hours before the period ends. Manage or cancel in your Apple Account settings. Buying Lifetime doesn’t cancel an existing subscription. Optional tips support development and don’t unlock Pro.</p>
           <a class="store-badge" href="https://apps.apple.com/app/sortglass/id6814702183">
             <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="150" height="50" loading="lazy">
           </a>
@@ -662,23 +576,23 @@
         <div class="faq">
           <details>
             <summary>Does SortGlass delete my photos?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div><p>Only when you confirm. Swiping up adds a photo to SortGlass Trash, which is just a queue. When you choose Delete in Trash, iOS asks you to confirm, and confirmed items move to Recently Deleted in Apple Photos, where Apple generally keeps them for up to 30 days unless you delete them sooner.</p></div>
+            <div><p>Only when you confirm. Swiping up adds a photo to SortGlass Trash, which is just a queue. When you choose Delete in Trash, your device asks you to confirm, and confirmed items move to Recently Deleted in Apple Photos, where Apple generally keeps them for up to 30 days unless you delete them sooner.</p></div>
           </details>
           <details>
             <summary>Does it work with iCloud Photos?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div><p>Yes. SortGlass works directly on your Apple Photos library, so favorites, albums, ratings and deletions sync through iCloud Photos according to your settings. Photos stored only in iCloud may download when you open them.</p></div>
+            <div><p>Yes. SortGlass works directly on your Apple Photos library, so favorites, albums, ratings on supported systems, and confirmed deletions sync through iCloud Photos according to your settings. Photos stored only in iCloud may download when you open them.</p></div>
           </details>
           <details>
             <summary>What do I need to use it?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div><p>An iPhone running iOS 18 or later. Star ratings require iOS 27 or later and SortGlass Pro. The Liquid Glass design appears on iOS 26 and later.</p></div>
+            <div><p>An iPhone with iOS 18 or later, an iPad with iPadOS 18 or later, or an Apple-silicon Mac (M1 or later) with macOS 15 or later. Star ratings require SortGlass Pro and supported system software; on iPhone and iPad, that means iOS 27 or iPadOS 27 or later. Liquid Glass appears on supported systems, including iOS 26 or later and iPadOS 26 or later.</p></div>
           </details>
           <details>
-            <summary>Is there an iPad or Mac version?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div><p>Not yet. SortGlass is available for iPhone today. iPad support and Mac support for Apple silicon Macs are coming in version 1.1.</p></div>
+            <summary>Will search find every photo and video?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <div><p>Search uses an index of the metadata SortGlass can read. Camera and lens details aren’t present in every file, and some iCloud-only originals need a download before their details can be checked. More → Photo Search Index shows progress and scan options. A completed scan doesn’t guarantee every file contains camera information.</p></div>
           </details>
           <details>
             <summary>How do I cancel or restore a purchase?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div><p>Manage or cancel subscriptions in Settings → your name → Subscriptions. To restore Pro on another device, open More → SortGlass Pro → Restore Purchases while signed in with the same Apple Account.</p><p><a href="support.html">More answers in Support</a></p></div>
+            <div><p>On iPhone or iPad, manage subscriptions in Settings → your name → Subscriptions. On Mac, open your account in the App Store and choose Subscriptions. See <a href="https://support.apple.com/en-us/118428">Apple’s cancellation instructions</a>. To restore Pro on another device, open More → SortGlass Pro → Restore Purchases while signed in with the same Apple Account.</p><p><a href="support.html">More answers in Support</a></p></div>
           </details>
         </div>
       </div>
@@ -686,10 +600,10 @@
 
     <!-- ===================== FINAL ===================== -->
     <section class="final solid" aria-labelledby="final-title">
-      <div class="final-photo"><img src="assets/photos/fern-wide-1600.webp" srcset="assets/photos/fern-wide-1600.webp 1600w, assets/photos/fern-wide-2400.webp 2400w" sizes="100vw" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+      <div class="final-photo"><img src="assets/photos/film-bridge-lights-1600.webp" srcset="assets/photos/film-bridge-lights-1600.webp 1600w, assets/photos/film-bridge-lights-2400.webp 2400w" sizes="100vw" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
       <div class="wrap">
-        <h2 id="final-title" class="micro-ca">Make room for what matters.</h2>
-        <p class="lede">Free to download. Your library, organized one decision at a time.</p>
+        <h2 id="final-title">Your next keeper<br>is in there.</h2>
+        <p class="lede">Open your library. Start with a few.</p>
         <div class="cta-row">
           <a class="store-badge" href="https://apps.apple.com/app/sortglass/id6814702183">
             <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="150" height="50" loading="lazy">
@@ -715,7 +629,7 @@
         </nav>
       </div>
       <div class="footer-legal">
-        <p>Some features, including star ratings, combined and saved filters and additional themes, require SortGlass Pro. Every Pro feature is included with any Pro subscription or the Lifetime purchase. Star ratings require iOS 27 or later.</p>
+        <p>Some features, including star ratings, combined and saved filters and additional themes, require SortGlass Pro. Every Pro feature is included with any Pro subscription or the Lifetime purchase. Star ratings require supported system software; on iPhone and iPad, that means iOS 27 or iPadOS 27 or later.</p>
         <p>SortGlass is an independent app and is not made, sponsored or endorsed by Apple Inc. Apple, the Apple logo, iPhone, iPad, Mac and iCloud are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
       </div>
     </div>
