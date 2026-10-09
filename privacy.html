@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <link rel="stylesheet" href="assets/css/site.css?v=13">
   <script src="assets/js/site.js?v=10" defer></script>
 </head>
 
@@ -58,9 +58,9 @@
     <div class="wrap">
       <article class="legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: <time datetime="2026-10-04">October 4, 2026</time></p>
+        <p class="updated">Last updated: <time datetime="2026-10-09">October 9, 2026</time></p>
 
-        <p>SortGlass is operated by Cyrus Press, an individual developer based in California, United States. This policy describes information handled when you use the SortGlass app, including public App Store releases and TestFlight builds, visit sortglass.com, or contact support. For information for which the operator determines the purposes and means of processing, Cyrus Press is the data controller.</p>
+        <p>SortGlass is operated by Cyrus Press, an individual developer based in California, United States. This policy describes information handled when you use the SortGlass app on iPhone, iPad or Mac, including public App Store releases and TestFlight builds, visit sortglass.com, or contact support. For information for which the operator determines the purposes and means of processing, Cyrus Press is the data controller.</p>
         <p>Privacy questions and requests: <a href="mailto:support@sortglass.com">support@sortglass.com</a>.</p>
 
         <h2>1. Overview</h2>
@@ -70,15 +70,22 @@
         <h2>2. Photos and videos</h2>
         <p>With your permission, SortGlass accesses authorized photos and videos to display, organize, rate, favorite, add items to albums, and request deletion. Associated information can include library identifiers, capture dates, media types, dimensions, duration, album membership, favorites, ratings, available file sizes, and embedded metadata such as recorded photo locations.</p>
         <p>Edits you make through SortGlass can change your Apple Photos library. Apple may synchronize these changes through iCloud Photos according to your settings. Apple Photos may download cloud-stored originals when needed; that is different from SortGlass uploading your library to its own server.</p>
-        <p>You control Photos access in iOS Settings. Restricting or withdrawing access can limit app features.</p>
+        <p>You control Photos access in your device's Settings (System Settings on a Mac). Restricting or withdrawing access can limit app features.</p>
 
         <h2>3. Local preferences and organizing information</h2>
         <p>SortGlass stores information needed for its features locally, including appearance preferences, organizing progress, reviewed-item identifiers, cleanup history, statistics, goals, achievements, and a processed-item allowance used for free access limits. This information supports your experience; it is not a developer dashboard of your photo activity.</p>
         <p>Clearing dashboard statistics does not reset the free allowance, delete your photos, or undo changes already made to Apple Photos.</p>
         <p>Photo search uses a local metadata index containing accessible asset references, filenames, file types, capture dates, dimensions, and available camera, lens and focal-length details. It does not store extra copies of your media. Normal app updates retain this index; deleting the app normally removes it. Automatic indexing reads local files. If you explicitly allow original-photo downloads for a manual scan, Apple Photos may download full originals to read missing metadata, even with Optimize iPhone Storage enabled. Apple controls the resulting Photos cache and its storage use.</p>
 
-        <h2>4. Optional private iCloud backup and metadata sync</h2>
-        <p>Where available in your build, statistics backup, saved-filter backup and search-metadata sync have separate opt-in controls and are off by default. They use your private iCloud database, not a developer analytics feed, and do not upload copies of your photos or videos. Features not offered in your build are not activated by installing it.</p>
+        <h2>4. Optional iCloud Sync, backups and metadata sync</h2>
+        <p>Where available in your build, iCloud Sync, statistics backup, saved-filter backup and search-metadata sync have separate opt-in controls and are off by default. They use your private iCloud database, not a developer analytics feed, and do not upload copies of your photos or videos. Features not offered in your build are not activated by installing it.</p>
+        <p>iCloud Sync (More → iCloud Sync) keeps the categories you choose the same on your devices signed in to the same Apple Account. Each category has its own switch on each device:</p>
+        <ul>
+          <li><strong>Appearance &amp; Settings:</strong> themes, colors, saved themes and colors, launch and glass options, the starting tab and similar preferences. Photos per row and grid style stay on each device.</li>
+          <li><strong>Pinned Albums &amp; Order:</strong> the names, Apple Photos' cross-device identifiers and order of pinned albums and folders, and the Albums tab's order.</li>
+          <li><strong>Goals, History &amp; Shortcuts:</strong> goal settings, achievements and when they were earned, and recent Trash and album actions: Apple Photos' cross-device identifier for each photo involved, the album name, the date and whether the action came from an iPhone, iPad or Mac. On iPad and Mac, keyboard shortcuts too.</li>
+        </ul>
+        <p>iCloud Sync does not include your photos or videos, Organize progress, SortGlass's Trash or the free allowance. Turning a category off stops that device from sending or receiving it; records already saved in iCloud stay there, and SortGlass does not yet have a button that deletes them. You can remove them by deleting SortGlass's data in your Apple Account's iCloud storage settings (Manage Storage), where SortGlass is listed. That removes all of SortGlass's iCloud records, including the backups and shared metadata described in this section.</p>
         <p>Statistics backup can include lifetime statistics, action history, photo identifiers used to avoid double-counting, dates, known file sizes, library totals and achievements. Saved-filter backup contains filter names and selections, including categories, ratings, file types, search terms/tokens, album references and On This Day dates, plus removal records so older devices do not restore deleted saved filters. These backups do not include active goal definitions or appearance settings.</p>
         <p>Search-metadata sync shares available camera make/model, lens model and actual/35mm-equivalent focal length, with hashed matching keys derived from photo identifiers and file details. It lets other authorized devices using the same iCloud account reuse indexed details. This option does not upload photos, videos, location coordinates, ratings or album contents. Each device still maintains its own catalogue, and unmatched or changed items may need indexing locally. Metadata sync is separate from permission to download original photos.</p>
         <p>You can turn each option off and use its deletion controls in SortGlass. Turning an option off stops future work on that device but does not delete already shared records, and a request already in flight may finish. Deleting the shared search index does not delete photos, local search data, statistics backups or saved filters. Shared metadata can remain after an item disappears from a device's accessible library; that absence alone is not treated as deletion from every device. Use Delete Shared Metadata to remove the shared index. Other devices with sync enabled can upload records again, so turn the option off there too. Reinstalling does not itself remove existing iCloud records; opt in again with the same account to reuse an available backup or shared metadata.</p>
@@ -91,6 +98,7 @@
         <h2>6. Purchases and subscriptions</h2>
         <p>Apple processes App Store purchases and subscriptions. SortGlass uses Apple's purchase information, such as product identifiers, transaction information, and entitlement status, to verify access and restore purchases. SortGlass does not receive your full payment-card information.</p>
         <p>Apple may provide sales and financial reports for operating the app business. Manage subscriptions through your Apple account. Deleting the app or clearing statistics does not cancel a subscription.</p>
+        <p>Optional tips are one-time in-app purchases processed by Apple. They unlock nothing, and we receive only Apple's standard sales records for them. Offer codes are redeemed in Apple's own code sheet or the App Store.</p>
 
         <h2>7. TestFlight and diagnostics</h2>
         <p>When you use a TestFlight beta, Apple automatically collects and shares crash logs and beta usage information with the developer. This can include installation and session information, device and operating-system details, and app versions. Your name and email may be available for email invitations; Apple does not display them to the developer merely because you join through a public link.</p>
@@ -98,8 +106,9 @@
         <p>For public releases, Apple may also provide crash, diagnostic, sales, and usage reports under Apple's services and applicable settings. Receiving these reports does not give us access to your private Photos library.</p>
 
         <h2>8. Sharing and notifications</h2>
-        <p>You choose whether to share or copy media, share progress, or send feedback. The destination you select may receive the shared content and associated metadata under its own privacy practices. Copying content places it on the system clipboard. Check content and recipients before sharing.</p>
-        <p>Optional goal reminders use local notifications with your permission. You can change notification permissions in iOS Settings.</p>
+        <p>You choose whether to share, copy or drag media into another app, share progress, or send feedback. The destination you select may receive the shared content and associated metadata under its own privacy practices. Copying content places it on the system clipboard. Check content and recipients before sharing.</p>
+        <p>With your permission, SortGlass schedules local reminders, at most one a day: On This Day (photos taken on today's date in earlier years), Photos to Sort, and a streak reminder. SortGlass works them out on your device from your photos' dates, how many photos are waiting to be sorted and the days you used the app, and your device shows them; no reminder content is sent to us or to any server. Each reminder has its own switch in More → Notifications, and you can change notification permission in your device's Settings.</p>
+        <p>SortGlass may show Apple's standard rating prompt; Apple handles ratings and reviews. Send Feedback and Email Support open your email app. Give Back's links and Donate buttons open each organization's own website in your browser; SortGlass does not see those pages, any payment, or whether you gave.</p>
 
         <h2>9. Support email</h2>
         <p>If you contact support@sortglass.com, we receive your email address, message, attachments, and associated email information. We use this information to answer questions, troubleshoot issues, handle privacy requests, and maintain necessary support records.</p>
@@ -125,7 +134,7 @@
         <p>Apple, GitHub, and Spaceship manage information in their services under their own retention practices. Deleting an operator-held copy does not necessarily remove a provider's independent records. We cannot directly erase your private Photos library or Apple device backups for you.</p>
 
         <h2>14. Your choices and privacy rights</h2>
-        <p>You can adjust Photos and notification permissions, clear dashboard statistics, manage Apple backups and subscriptions, stop beta participation, and choose whether to share content or contact support.</p>
+        <p>You can adjust Photos and notification permissions, turn iCloud Sync categories, backups and metadata sync on or off, clear dashboard statistics, manage Apple backups and subscriptions, stop beta participation, and choose whether to share content or contact support.</p>
         <p>Depending on your location and applicable law, you may have rights to request access, correction, deletion, or a portable copy of personal information; object to or restrict processing; withdraw consent; and complain to a privacy regulator. Where applicable, you may appeal a decision by replying to our response and requesting review. We will not unlawfully discriminate against you for exercising privacy rights.</p>
         <p>Send requests to <a href="mailto:support@sortglass.com">support@sortglass.com</a>. We may request information reasonably needed to verify your identity or authority, but will not ask for your entire photo library. Rights and exceptions depend on the applicable law and whether the information is held by us or independently by a provider.</p>
         <p>We do not sell personal information or share it for cross-context behavioral advertising. The app does not track you across other companies' apps or websites for advertising.</p>
