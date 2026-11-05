@@ -1032,6 +1032,24 @@
 .other-options summary .icon { width: 16px; height: 16px; color: var(--text-3); transition: transform 0.3s var(--ease-out); }
 .other-options[open] summary .icon { transform: rotate(45deg); }
 .plan-lifetime { padding: 4px 0 22px; }
+.sale-pill {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--amber) 60%, transparent);
+  background: color-mix(in srgb, var(--amber) 14%, transparent);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+.other-options summary .sale-pill { margin-right: auto; }
+@media (max-width: 420px) { .other-options summary .sale-pill { margin-left: 6px; padding: 2px 7px; font-size: 0.6875rem; } }
+.other-options[open] summary .sale-pill { display: none; }
+.plan-price .plan-was { margin-left: 8px; color: var(--text-3); font-size: 0.9375rem; font-weight: 500; letter-spacing: 0; }
 .pricing-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; margin-top: 24px; }
 .pricing-foot .fineprint { max-width: 62em; }
 
