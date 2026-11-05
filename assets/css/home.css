@@ -996,7 +996,7 @@
 
 .plans {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 8px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
