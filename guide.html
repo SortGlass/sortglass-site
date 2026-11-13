@@ -26,7 +26,7 @@
   <meta property="og:image" content="https://sortglass.com/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="assets/css/site.css?v=13">
+  <link rel="stylesheet" href="assets/css/site.css?v=14">
   <script src="assets/js/site.js?v=10" defer></script>
 </head>
 
@@ -76,11 +76,17 @@
           <p>On this page</p>
           <ol>
             <li><a href="#start">Getting started</a></li>
+            <li><a href="#quick">Quick answers</a></li>
             <li><a href="#tabs">The five tabs</a></li>
             <li><a href="#library">Library</a></li>
             <li><a href="#browse">Browse</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#cleanup">Cleanup</a></li>
             <li><a href="#organize">Organize</a></li>
             <li><a href="#albums">Albums</a></li>
+            <li><a href="#vault">The Vault</a></li>
+            <li><a href="#tools">Photo tools</a></li>
+            <li><a href="#scans">Library Scans</a></li>
             <li><a href="#more">More</a></li>
             <li><a href="#devices">iPad, Mac and iCloud</a></li>
             <li><a href="#trash">Trash and deleting</a></li>
@@ -96,20 +102,34 @@
               <li>Download SortGlass from the App Store. It supports iPhone with iOS 18 or later, iPad with iPadOS 18 or later, and Mac with macOS 15 or later and an Apple M1 chip or later.</li>
               <li>When asked, allow access to your photos. Review access later in More → Privacy &amp; Photos Access, or in your device’s Settings (System Settings on Mac). Restricting access limits what SortGlass can show and organize.</li>
               <li>Choose what to organize in Browse, or go straight to Organize to start with everything.</li>
+              <li>Let SortGlass read your library. Search and cleanup suggestions use what it finds. See <a href="#scans">Library Scans</a>.</li>
             </ol>
             <div class="callout">
               <p><b>Connected to Apple Photos.</b> Favorites, album changes, ratings on supported systems, and confirmed deletions apply to your Photos library too. Sending an item to SortGlass Trash only queues it: you review and confirm before it’s deleted from Photos.</p>
             </div>
           </section>
 
+          <section id="quick" aria-labelledby="quick-title">
+            <h2 class="tab-title" id="quick-title">Quick answers</h2>
+            <ul>
+              <li><a href="#search">Find a photo by describing it</a></li>
+              <li><a href="#cleanup">Clear out screenshots, blurry shots and duplicates</a></li>
+              <li><a href="#cleanup">See what’s taking up space</a></li>
+              <li><a href="#browse">Go through one trip or a few days</a></li>
+              <li><a href="#vault">Keep photos private</a></li>
+              <li><a href="#tools">Fix a photo’s date or place</a></li>
+              <li><a href="#trash">Get back something you deleted</a></li>
+            </ul>
+          </section>
+
           <section id="tabs" aria-labelledby="tabs-title">
             <h2 class="tab-title" id="tabs-title">The five tabs</h2>
             <ul>
-              <li><b>Library:</b> see the whole library, select in bulk, and revisit your rated photos.</li>
-              <li><b>Browse:</b> choose the photos and videos you want to organize.</li>
+              <li><b>Library:</b> see your whole library, search it, and select in bulk.</li>
+              <li><b>Browse:</b> search, find clutter, and choose what to organize.</li>
               <li><b>Organize:</b> review one at a time. Favorite, rate, add to albums, or send to Trash.</li>
-              <li><b>Albums:</b> explore and manage your albums and folders.</li>
-              <li><b>More:</b> your settings, appearance, progress, and this guide.</li>
+              <li><b>Albums:</b> your albums, folders and the Vault.</li>
+              <li><b>More:</b> Library Scans, settings, appearance, your progress, and this guide.</li>
             </ul>
           </section>
 
@@ -123,13 +143,13 @@
               <figcaption>Library, with ratings shown on the grid.</figcaption>
             </figure>
             <h3>See your full library</h3>
-            <p>Browse your photos and videos, or search their camera, lens, file type and date details. Tap an item for a closer look.</p>
+            <p>Scroll through your photos and videos, and tap one for a closer look. The Library shows the same photos as Browse, so a filter or search you choose there applies here too.</p>
             <h3 id="photo-location">Explore photo locations</h3>
-            <p>Open a photo’s information panel to see its available metadata. If it has a saved location, tap the map to expand it, then turn on Nearby to explore other photos taken in that area. Only photos with location information and access granted to SortGlass can appear on the map.</p>
+            <p>Tap the map button to see the photos you’re looking at on a map. Photos taken close together form stacks; tap one to open them. For a single photo, swipe up on it to open Details, tap the map, then turn on Nearby to see other photos taken there.</p>
             <h3>Work with several at once</h3>
-            <p>Select multiple items to send to Trash, add to an album, or favorite.</p>
+            <p>Tap Select and choose photos, then touch and hold one for Favorite, Add to Album, Set Rating, Duplicate, Copy, Hide, Share and Add to Trash. You can also drag them into another app.</p>
             <h3>Choose your grid</h3>
-            <p>Pinch to change the number of photos per row, and use the view options to adjust the layout. Larger screens can show more photos across. Favorite hearts and ratings can be shown on the grid.</p>
+            <p>Pinch to change the number of photos per row, and use the grid menu to adjust the layout. Favorite hearts, ratings and the green Kept check can be shown on the grid.</p>
             <h3>Revisit your ratings</h3>
             <p>See rated photos again and compare your picks. Ratings require Pro and a supported system; on iPhone and iPad, that means iOS 27 or iPadOS 27 or later.</p>
           </section>
@@ -137,16 +157,42 @@
           <section id="browse" aria-labelledby="browse-title">
             <h2 class="tab-title" id="browse-title">Browse</h2>
             <p>Choose a smaller set of photos and videos to work through.</p>
-            <h3>All or Unsorted</h3>
-            <p>Start with everything, or choose Unsorted for items that are not in an album.</p>
+            <h3>All, Unsorted or Kept</h3>
+            <p>Start with everything. Unsorted shows photos you haven’t filed into an album or marked Keep. Kept shows the ones you’ve marked Keep.</p>
             <h3>Jump to a year</h3>
             <p>The year tiles show how many matching items were taken that year. Tap a year to start there in Organize.</p>
-            <h3>Search photo details</h3>
-            <p>Search by camera, lens, focal length, file type or date. Choose matching suggestions to narrow the results. With Pro, combine your search with filters and save combinations you use again.</p>
             <h3>Focus with Pro</h3>
-            <p>Combine filters for favorites, media and file types, albums, dates, and ratings on supported devices. With Pro, you can also customize your filters and save named combinations to use again.</p>
+            <p>Combine filters for favorites, media and file types, albums, ratings on supported devices, and a Date Range for a trip or a few days. Customize your filters and save the combinations you use again.</p>
+            <h3>See trips and places</h3>
+            <p>Trips &amp; Events groups photos by when and where they were taken. Set a home city on the card so trips are measured from it. The Map card shows your photos on a map. Opening a trip needs Pro.</p>
             <h3>Choose how to review</h3>
             <p>Open the results in Library for a grid, or in Organize to review them one at a time.</p>
+          </section>
+
+          <section id="search" aria-labelledby="search-title">
+            <h2 class="tab-title" id="search-title">Search</h2>
+            <p>Search in Browse or in the Library’s search bar.</p>
+            <h3>Describe what you’re looking for</h3>
+            <p>Type what’s in the photo, such as “dog on a beach” or “red car at night”. SortGlass compares your words with what it read in each photo, on your device.</p>
+            <h3>Pick a suggestion</h3>
+            <p>As you type, suggestions come by kind: things in photos, colors, places, dates, camera details, and words inside photos. Each one you pick becomes a tag, and every tag narrows the results.</p>
+            <h3>Search by date or place</h3>
+            <p>Type a year, a month, a season (“summer 2023”), a holiday (“Christmas”), a time of day (“morning”) or a recent time (“last week”). Add a place or a date to a description to narrow it (“dog on a beach 2023”).</p>
+            <h3>Find words in photos</h3>
+            <p>To find text in a screenshot or a sign, choose the Text in Photos suggestion.</p>
+            <p>Search works best once Library Scans has read your library.</p>
+          </section>
+
+          <section id="cleanup" aria-labelledby="cleanup-title">
+            <h2 class="tab-title" id="cleanup-title">Cleanup</h2>
+            <p>Browse’s cards help you find what you don’t need.</p>
+            <h3>Storage</h3>
+            <p>The bar shows how much space your Videos, Live Photos, Screenshots and Photos take. With Pro, tap a part to see just those.</p>
+            <h3>Cleanup Suggestions</h3>
+            <p>Likely clutter, by kind: Screenshots, Screen Recordings, Saved Images, Documents &amp; Receipts, and Blurry or Poor Shots. Each shows how many there are.</p>
+            <h3>Similar &amp; Duplicates</h3>
+            <p>SortGlass compares your photos on your device and finds exact copies and look-alikes, such as bursts and retakes. Open a set to compare the photos side by side and choose which to keep.</p>
+            <p>Reviewing Cleanup Suggestions and Similar &amp; Duplicates needs Pro. What you choose goes to SortGlass Trash first, so nothing is deleted until you confirm.</p>
           </section>
 
           <section id="organize" aria-labelledby="organize-title">
@@ -162,13 +208,15 @@
               <figcaption id="organize-video-text">Swipe up to queue for Trash; swipe down to favorite.</figcaption>
             </figure>
             <h3>Swipe to keep moving</h3>
-            <p>Swipe sideways to browse, down to favorite, and up to send a photo or video to Trash.</p>
+            <p>Swipe sideways to browse, down to favorite, and up to send a photo or video to Trash. Choose Newest First or Oldest First in the sort menu.</p>
+            <h3>Keep without filing</h3>
+            <p>Tap Keep to mark a photo sorted and move on, without favoriting or filing it. Kept photos show a green check. Tap Kept to remove the mark.</p>
             <h3>Give photos a home</h3>
             <p>Tap an album beneath the photo to add it. A colored album icon means it’s already there; tap again to remove it without advancing. Tap New to create an album or folder. A photo can belong to several albums.</p>
             <h3>Choose your strongest shots</h3>
             <p>With Pro on a system that supports ratings, tap Set Rating, then a star. Ratings save directly to your Apple Photos library, not just SortGlass. Revisit them in Library or filter them in Browse for a second pass. On iPhone and iPad, ratings require iOS 27 or iPadOS 27 or later.</p>
             <h3>Undo, redo, and inspect</h3>
-            <p>The curved arrows undo and redo recent actions. History lets you revisit and undo your last 100 album and Trash actions. The information panel shows available camera and lens details, album membership, and a map for items with location information.</p>
+            <p>The curved arrows undo and redo recent actions. History lets you revisit and undo your last 100 album and Trash actions. Tap ⓘ for Details: camera and lens information, albums, a map, and on iOS 27 the caption and keywords. Details stays open as you move between photos.</p>
           </section>
 
           <section id="albums" aria-labelledby="albums-title">
@@ -176,16 +224,53 @@
             <p>Everything in its place.</p>
             <figure class="guide-figure">
               <div class="screen"><div class="screen-glass">
-                <img src="assets/screens/albums.webp" alt="The Albums tab listing folders and albums, each album with a pin button and a reorder handle." width="640" height="1388" loading="lazy" decoding="async">
+                <img src="assets/screens/albums.webp" alt="The Albums tab listing folders and albums, each album with a pin button." width="640" height="1388" loading="lazy" decoding="async">
               </div></div>
-              <figcaption>Albums, with pin buttons and reorder handles.</figcaption>
+              <figcaption>Albums, with pin buttons.</figcaption>
             </figure>
             <h3>Browse and manage</h3>
-            <p>Search for an album or folder, then open it to browse. Choose Organize Album when you want to review its contents one at a time.</p>
+            <p>Choose All, Albums, Folders or Pinned at the top. Search for an album or folder, then open it to browse. Choose Organize Album to review its contents one at a time.</p>
+            <h3>Folders inside folders</h3>
+            <p>Folders can hold albums and other folders, as in Photos. Choose Move to Folder from the ••• menu of an album or folder. In your own order, you can also drag an album onto a folder.</p>
             <h3>Keep favorites close</h3>
-            <p>Pin frequently used albums and folders to put them in Organize’s album row. Open a pinned folder right in the row. Use the Pinned view to find them quickly.</p>
-            <h3>Arrange your workflow</h3>
-            <p>Reorder your pinned albums to put the ones you reach for most first. In Albums, choose alphabetical sorting or your own order.</p>
+            <p>Pin the albums and folders you use most to put them in Organize’s album row, in the order you choose. Open a pinned folder right in the row.</p>
+          </section>
+
+          <section id="vault" aria-labelledby="vault-title">
+            <h2 class="tab-title" id="vault-title">The Vault</h2>
+            <p>A private place for photos and videos, encrypted on your device. Find it in Albums.</p>
+            <h3>Set it up</h3>
+            <p>Choose a password, then save the recovery key SortGlass shows you. The recovery key opens the Vault if you forget the password. Without either one, nobody can open the Vault, not even SortGlass. You can also turn on Face ID.</p>
+            <h3>Move photos in</h3>
+            <p>Choose Move to Vault in a photo’s menu, in Select, or in Organize’s album row. SortGlass encrypts each item, then deletes the original from Apple Photos, which keeps it in Recently Deleted for 30 days. You can also share photos to SortGlass from another app.</p>
+            <h3>Inside the Vault</h3>
+            <p>Organize items into folders, which can have their own password. Items you delete stay in the Vault’s Recently Deleted for 30 days. To take something out, use Export, which shares a copy.</p>
+            <h3>On your other devices</h3>
+            <p>The Vault’s encrypted copy is kept in your private iCloud. Open it on your other devices with the same password. The Vault locks when you leave SortGlass.</p>
+          </section>
+
+          <section id="tools" aria-labelledby="tools-title">
+            <h2 class="tab-title" id="tools-title">Photo tools</h2>
+            <p>In the photo menus of the Library, albums and Cleanup, for one photo or a selection.</p>
+            <h3>Export as JPEG</h3>
+            <p>Choose a quality, and whether to include the date and location, then share. Videos are skipped.</p>
+            <h3>Adjust Date &amp; Place</h3>
+            <p>Set one date and time for all, or shift them all by the same amount so they keep their order. Type a place, paste coordinates, drop a pin, or remove the place. Changes are saved in Apple Photos, and Undo puts the old ones back.</p>
+            <h3>Captions and keywords</h3>
+            <p>On iOS 27, Details shows a photo’s caption and keywords from Apple Photos. Tap them to edit. Search finds them too.</p>
+          </section>
+
+          <section id="scans" aria-labelledby="scans-title">
+            <h2 class="tab-title" id="scans-title">Library Scans</h2>
+            <p>SortGlass reads your library once to power search and cleanup. Find it in More → Library Scans.</p>
+            <h3>What it reads</h3>
+            <p>Camera &amp; Lens reads each item’s camera details and file size. Objects &amp; Text reads what’s in each photo and the words in it. Cleanup &amp; Similar finds clutter and look-alikes. Everything is read on your device, and your photos aren’t uploaded.</p>
+            <h3>Let it run</h3>
+            <p>A big library can take a while. Turn on Scan in Background to keep reading while you use other apps or lock your iPhone (iOS and iPadOS 26 or later). Or use Scan Overnight: plugged in, the screen stays dim and on until scanning finishes. On a Mac, scanning runs while SortGlass is open.</p>
+            <h3>Photos in iCloud</h3>
+            <p>Photos stored only in iCloud are read only if you allow it with Download iCloud Photos: Wi-Fi Only, or Wi-Fi &amp; Cellular. Sync Now reads new photos right away.</p>
+            <h3>Your other devices</h3>
+            <p>With iCloud Sync on, your other devices and a reinstall pick up what was found, so photos aren’t read again. When you delete a photo, what was read in it is removed too.</p>
           </section>
 
           <section id="more" aria-labelledby="more-title">
@@ -197,14 +282,14 @@
               </div></div>
               <figcaption>Appearance &amp; Design, in More.</figcaption>
             </figure>
-            <h3>Set your preferences</h3>
-            <p>Adjust app behavior and the way you organize.</p>
             <h3>Make it yours</h3>
-            <p>Explore Appearance &amp; Design, including preset and saved themes and custom colors. Pro unlocks additional themes, icons, colors, and launch styles.</p>
-            <h3>Check search progress</h3>
-            <p>Open Photo Search Index to see which items have been checked. Some files don’t contain camera or lens details. The optional Index with iCloud Photos scan can read missing details by downloading original photos, which can use storage, data and battery.</p>
+            <p>Explore Appearance &amp; Design: themes, background and accent colors, heart colors, launch styles, app icons and loading animations. Pro unlocks every theme, color, icon and launch style.</p>
+            <h3>Reminders and widgets</h3>
+            <p>In Notifications, choose reminders for On This Day, photos to sort and streaks, Cleanup reminders on your own schedule, and a monthly recap. Add SortGlass widgets to your Home Screen: Left to Sort, On This Day and Space to Free.</p>
+            <h3>Privacy and security</h3>
+            <p>In Privacy &amp; Photos Access, turn on App Lock to open SortGlass with Face ID, Touch ID or your passcode. On-Device Search says what SortGlass reads and where it’s kept.</p>
             <h3>See your progress</h3>
-            <p>Visit your dashboard for organization and cleanup statistics.</p>
+            <p>Your Progress holds your Cleanup Dashboard, statistics, goals and achievements.</p>
             <h3>Come back anytime</h3>
             <p>You can always find the User Guide in More.</p>
           </section>
@@ -212,10 +297,10 @@
           <section id="devices" aria-labelledby="devices-title">
             <h2 class="tab-title" id="devices-title">iPad, Mac and iCloud</h2>
             <h3>Use a bigger screen</h3>
-            <p>SortGlass supports iPad multitasking and runs on Apple silicon Macs as a Designed for iPad app. On iPad and Mac, use a mouse or trackpad to click-drag a selection, or Shift-click to select a range. Customize keys for Organize and the full-screen viewer in More → Keyboard Shortcuts.</p>
+            <p>SortGlass supports iPad multitasking and runs on Apple silicon Macs as a Designed for iPad app. Details opens as a column beside the photo. Use a mouse or trackpad to click-drag a selection, or Shift-click to select a range. Customize keys in More → Keyboard Shortcuts.</p>
             <h3>Choose what syncs</h3>
-            <p>In More → iCloud Sync, choose which settings to share between devices signed in to the same Apple Account: appearance, pinned albums and their order, goals, achievements, history, and keyboard shortcuts. Turn on the categories you want on each device. Your Organize position and SortGlass Trash queue stay on that device.</p>
-            <p>Photo search details have a separate optional sync setting in More → Photo Search Index. These settings are separate from iCloud Photos, which syncs changes to your Photos library according to your Apple settings.</p>
+            <p>In More → iCloud Sync, one switch turns syncing on or off, and What Syncs lists each category: Appearance &amp; Settings, Pinned Albums &amp; Order, Goals, History &amp; Statistics, Saved Filters, Library Scans, and Keyboard Shortcuts on iPad and Mac. Tap one to turn it on or off. Your Organize position and SortGlass Trash stay on each device.</p>
+            <p>Delete Everything from iCloud removes SortGlass’s data from iCloud and keeps what’s on your device. iCloud Sync is separate from iCloud Photos, which syncs your Photos library according to your Apple settings.</p>
           </section>
 
           <section id="trash" aria-labelledby="trash-title">
@@ -231,8 +316,8 @@
 
           <section id="pro" aria-labelledby="pro-title">
             <h2 class="tab-title" id="pro-title">Free and Pro</h2>
-            <p>SortGlass is free to download. The free version includes up to 100 Trash and Album actions each week; Favorites, Browse, and Undo are always included. The weekly count starts again every Monday at 00:00 UTC.</p>
-            <p>SortGlass Pro unlocks unlimited organizing, star ratings on supported systems, combined and saved filters, and every theme, app icon and accent color. Every Pro feature is included with any Pro subscription or the Lifetime purchase.</p>
+            <p>SortGlass is free to download. The free version includes up to 100 Trash and Album actions each week; Favorites, Browse, Search, the Vault and Undo are always included. The weekly count starts again every Monday at 00:00 UTC.</p>
+            <p>SortGlass Pro unlocks unlimited organizing, star ratings on supported systems, combined and saved filters including Date Range, reviewing Cleanup Suggestions, Similar &amp; Duplicates and Trips, and every theme, app icon and accent color. Every Pro feature is included with any Pro subscription or the Lifetime purchase.</p>
             <h3>Restore a purchase</h3>
             <p>Open More → SortGlass Pro → Restore Purchases while signed in with the Apple Account you used to buy Pro.</p>
             <h3>Cancel a subscription</h3>
