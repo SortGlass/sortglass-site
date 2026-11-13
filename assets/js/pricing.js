@@ -1,11 +1,25 @@
-/* SortGlass website: Lifetime sale prices.
-   The page lists the regular prices. During a scheduled sale (the same
-   dates as the App Store's price schedule, from midnight Pacific Time)
-   this shows the sale price instead, with the regular price struck
-   through, and a small pill names the sale on Lifetime and on the
-   "Other purchase options" line, which stays closed. */
+/* SortGlass website: scheduled prices.
+   The page lists the regular prices. Yearly is $24.99 from November 14,
+   2026; before then this shows the price it replaces. During a scheduled
+   Lifetime sale (the same dates as the App Store's price schedule, from
+   midnight Pacific Time) this shows the sale price instead, with the
+   regular price struck through, and a small pill names the sale on
+   Lifetime and on the "Other purchase options" line, which stays closed. */
 (function () {
   'use strict';
+
+  var YEARLY = { from: '2026-11-14T00:00:00-08:00', price: '$24.99', before: '$49.99' };
+  if (Date.now() < Date.parse(YEARLY.from)) {
+    var plans = document.querySelectorAll('.plans .plan');
+    for (var p = 0; p < plans.length; p++) {
+      var label = plans[p].querySelector('.plan-name');
+      if (!label || label.textContent.trim() !== 'Yearly') continue;
+      var amount = plans[p].querySelector('.plan-price');
+      if (amount && amount.firstChild && amount.firstChild.nodeType === 3) amount.firstChild.nodeValue = YEARLY.before;
+      var terms = plans[p].querySelector('.plan-note');
+      if (terms) terms.textContent = terms.textContent.split(YEARLY.price).join(YEARLY.before);
+    }
+  }
 
   var SALES = [
     { start: '2026-11-16T00:00:00-08:00', end: '2026-11-30T00:00:00-08:00', price: '$14.99', name: 'Black Friday Sale', note: 'Black Friday price through November 29.' },
