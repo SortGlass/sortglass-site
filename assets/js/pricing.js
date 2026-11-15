@@ -22,7 +22,8 @@
   }
 
   var SALES = [
-    { start: '2026-11-16T00:00:00-08:00', end: '2026-11-30T00:00:00-08:00', price: '$14.99', name: 'Black Friday Sale', note: 'Black Friday price through November 29.' },
+    { start: '2026-11-15T00:00:00-08:00', end: '2026-11-18T00:00:00-08:00', price: '$2.99', name: 'Flash Sale', note: 'Flash sale price through November 17.' },
+    { start: '2026-11-18T00:00:00-08:00', end: '2026-11-30T00:00:00-08:00', price: '$14.99', name: 'Black Friday Sale', note: 'Black Friday price through November 29.' },
     { start: '2026-12-21T00:00:00-08:00', end: '2027-01-01T00:00:00-08:00', price: '$14.99', name: 'Holiday Sale', note: 'Holiday price through December 31.' }
   ];
 
